@@ -1,44 +1,35 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-title: Bay Jekyll Theme
+title: Sriram
 description: >- # this means to ignore newlines until "baseurl:"
   Bay is a minimal Jekyll Theme.
-baseurl: "/bay" # the subpath of the site
-url: "https://eliottvincent.github.io" # the base hostname & protocol for the site
-og_image: /assets/img/profile-pic.jpg
+baseurl: "/" # the subpath of the site
+url: "https://sri-ram-swaminathan.github.io" # the base hostname & protocol for the site
+og_image: /assets/img/profile-pic-1.jpg
 google_analytics: "UA-121636368-3"
 
 header:
   pages:
     - name: Home
       slug: /
-    - name: Work
+    - name: Resume
+      slug: https://docs.google.com/document/d/1jSykY4C7Jw1UK_kYDy1uVyo3v5R98XwGOKjYhS1dmSE/copy
     - name: Blog
+      slug: https://sriramthinksaboutthings.blogspot.com/
 
 footer:
-  show_powered_by: true
+  show_powered_by: false
   contact:
     - name: Email
-      value: yourmail@domain.com
-      link: mailto:yourmail@domain.com
-    - name: WeChat
-      value: YourWeChatUsername
-      link: "#"
-  follow:
-    - name: Twitter
-      link: http://twitter.com/YourTwitterUsername
-      username: "@YourTwitterUsername"
-    - name: Facebook
-      link: http://facebook.com/YourFacebookUsername
+      value: Email
+      link: mailto:intray.sri@gmail.com
     - name: LinkedIn
-      link: http://linkedin.com/in/YourLinkedInUsername
+      link: http://linkedin.com/in/hisriram
     - name: GitHub
-      link: http://github.com/YourGitHubUsername
-    - name: Dribbble
-      link: https://dribbble.com/YourDribbbleUsername
-    - name: RSS
-      link: /feed.xml
+      link: http://github.com/sri-ram-swaminathan
+    - name: Kaggle
+      link: https://www.kaggle.com/sriramswaminathan
 
 # Build settings
 markdown: kramdown
