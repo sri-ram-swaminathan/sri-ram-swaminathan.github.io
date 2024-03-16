@@ -30,9 +30,7 @@ footer:
       link: http://github.com/sri-ram-swaminathan
     - name: Kaggle
       link: https://www.kaggle.com/sriramswaminathan
-<p>
-you miss 100% of the shots you don't take
-</p>
+
 # Build settings
 markdown: kramdown
 sass:
