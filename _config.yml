@@ -3,7 +3,7 @@
 
 title: Sriram
 description: >- # this means to ignore newlines until "baseurl:"
-  Bay is a minimal Jekyll Theme.
+  This is my personal website.
 baseurl: "/" # the subpath of the site
 url: "https://sri-ram-swaminathan.github.io" # the base hostname & protocol for the site
 og_image: /assets/img/profile-pic-1.jpg
