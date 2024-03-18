@@ -16,7 +16,7 @@ header:
     - name: Resume
       slug: https://docs.google.com/document/d/1jSykY4C7Jw1UK_kYDy1uVyo3v5R98XwGOKjYhS1dmSE/copy
     - name: Blog
-      slug: https://sriramthinksaboutthings.blogspot.com/
+      slug: https://medium.com/@sriramthinksaboutthings
 
 footer:
   show_powered_by: false
