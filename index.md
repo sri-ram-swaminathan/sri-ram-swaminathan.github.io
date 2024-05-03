@@ -9,17 +9,17 @@ profile_picture:
   👋🏽 Well Hello There
 </p>
 <p>
-My name is Sriram. I recently graduated with a Bachelor's in Physics and Mathematics. I want to pursue a Master's in Data Science. I am passionate about using my technical skills to make an impact with data.
+My name is Sriram. I recently graduated with a Bachelor's in Physics and Mathematics. I want to pursue a Master's in Data Science. I am passionate about using my technical skills to make a positive impact using data.
 </p>
 
 <p>
 	Currently, I am:
 				<ul>
 					<li>
-							Learning probability
+							Mastering Numpy 
 					</li>
 					<li>
-							Working on a machine learning project
+							Learning machine learning
 					</li>
 					</ul>
 </p>
