@@ -16,7 +16,7 @@ My name is Sriram. I recently graduated with a Bachelor's in Physics and Mathema
 	Currently, I am:
 				<ul>
 					<li>
-							Mastering Numpy 
+							Mastering NumPy 
 					</li>
 					<li>
 							Learning machine learning
