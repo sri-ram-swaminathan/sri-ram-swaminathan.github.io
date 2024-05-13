@@ -16,10 +16,16 @@ My name is Sriram. I recently graduated with a Bachelor's in Physics and Mathema
 	Currently, I am:
 				<ul>
 					<li>
+							Dusting off my to be read pile  
+					</li>
+					<li>
+							Working through Gilbert Strang's Linear Algbera textbook 
+					</li>
+					<li>
 							Mastering NumPy 
 					</li>
 					<li>
-							Learning machine learning
+							Learning Machine Learning
 					</li>
 					</ul>
 </p>
