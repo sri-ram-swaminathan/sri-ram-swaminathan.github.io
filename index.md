@@ -37,7 +37,7 @@ My name is Sriram. I recently graduated with a Bachelor's in Physics and Mathema
 Here is a list of all the projects I have worked on : 
 
 - Data Analysis / Data Visualization
-  - 
+  - NA
 - Machine Learning
   - [Spaceship Titanic and Decision Trees](https://github.com/sri-ram-swaminathan/Spaceship-Titanic-and-Decision-Trees)
   - [MIT 6.86x]()
