@@ -35,8 +35,14 @@ My name is Sriram. I recently graduated with a Bachelor's in Physics and Mathema
 
 Here is a list of all the projects I have worked on : 
 
+- Data Cleaning
+  - NA 
 - Data Analysis / Data Visualization
   - NA
 - Machine Learning
   - [Spaceship Titanic and Decision Trees](https://github.com/sri-ram-swaminathan/Spaceship-Titanic-and-Decision-Trees)
   - [MIT 6.86x]()
+- Artificial Intelligence
+  - NA
+- Miscellaneous
+  - [Pokemon Card Generator](https://github.com/sri-ram-swaminathan/CS50P-Final-Project)  
