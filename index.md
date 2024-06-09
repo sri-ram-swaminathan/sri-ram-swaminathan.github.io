@@ -33,7 +33,6 @@ My name is Sriram. I recently graduated with a Bachelor's in Physics and Mathema
   I played football semi professionally uptil 2021 and enjoy being in nature, especially in the company of elephants 🐘 
 </p>
 
-<p>
 Here is a list of all the projects I have worked on : 
 
 - Data Analysis / Data Visualization
@@ -41,4 +40,3 @@ Here is a list of all the projects I have worked on :
 - Machine Learning
   - [Spaceship Titanic and Decision Trees](https://github.com/sri-ram-swaminathan/Spaceship-Titanic-and-Decision-Trees)
   - [MIT 6.86x]()
-</p>
