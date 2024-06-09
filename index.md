@@ -41,7 +41,7 @@ Here is a list of all the projects I have worked on :
   - NA
 - Machine Learning
   - [Spaceship Titanic and Decision Trees](https://github.com/sri-ram-swaminathan/Spaceship-Titanic-and-Decision-Trees)
-  - [MIT 6.86x]()
+  - [MIT 6.86x](https://github.com/sri-ram-swaminathan/MIT-6.86x)
 - Artificial Intelligence
   - NA
 - Miscellaneous
