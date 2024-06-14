@@ -21,7 +21,7 @@ I consider myself to be a detective 🕵🏽‍♂️, using Statistical Analysi
 							Dusting off my to be read pile  
 					</li>
 					<li>
-							Working through Gilbert Strang's Linear Algbera textbook 
+							Working through Gilbert Strang's Linear Algebra textbook 
 					</li>
 					<li>
 							Mastering NumPy 
