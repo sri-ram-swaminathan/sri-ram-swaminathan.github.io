@@ -11,7 +11,9 @@ profile_picture:
 <p>
 My name is Sriram. I recently graduated with a Bachelor's in Physics and Mathematics. I want to pursue a Master's in Data Science. I am passionate about using my technical skills to make a positive impact using data.
 </p>
-
+<p>
+I consider myself to be a detective 🕵🏽‍♂️, using Statistical Analysis powered by Computer Programming to draw Inferences from the messy world of Data ! 
+</p>
 <p>
 	Currently, I am:
 				<ul>
