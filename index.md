@@ -47,4 +47,5 @@ Here is a list of all the projects I have worked on :
 - Artificial Intelligence
   - NA
 - Miscellaneous
-  - [Pokemon Card Generator](https://github.com/sri-ram-swaminathan/CS50P-Final-Project)  
+  - [Pokemon Card Generator](https://github.com/sri-ram-swaminathan/CS50P-Final-Project)
+  - [100 NumPy Problems](https://github.com/sri-ram-swaminathan/100-NumPy-Problems)
