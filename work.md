@@ -1,8 +1,3 @@
----
-layout: work
-title: Work
-slug: /work
-
 Here is a list of all the projects I have worked on : 
 
 - Data Cleaning
