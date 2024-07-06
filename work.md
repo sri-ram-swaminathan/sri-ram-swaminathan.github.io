@@ -3,10 +3,10 @@ Here is a list of all the projects I have worked on :
 - Data Cleaning 🧹
   - NA 
 - Data Analysis / Data Visualization 📊
-  - NA
+  - [NeverLosen](https://medium.com/@sriramthinksaboutthings/neverlosen-857fcb9761f4)
 - Machine Learning 🤖
+  -[ISL Python](https://github.com/sri-ram-swaminathan/ISL-Python) 
   - [Spaceship Titanic and Decision Trees](https://github.com/sri-ram-swaminathan/Spaceship-Titanic-and-Decision-Trees)
-  - [MIT 6.86x](https://github.com/sri-ram-swaminathan/MIT-6.86x)
 - Artificial Intelligence 🧠
   - NA
 - Miscellaneous 🎡
