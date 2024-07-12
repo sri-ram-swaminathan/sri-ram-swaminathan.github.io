@@ -20,7 +20,7 @@ header:
     - name: Work
 
 footer:
-  show_powered_by: false
+  show_powered_by: true
   contact:
     - name: Email
       value: Email
@@ -29,8 +29,6 @@ footer:
       link: http://linkedin.com/in/hisriram
     - name: GitHub
       link: http://github.com/sri-ram-swaminathan
-    - name: Kaggle
-      link: https://www.kaggle.com/sriramswaminathan
 
 # Build settings
 markdown: kramdown
