@@ -14,7 +14,7 @@ header:
     - name: Home
       slug: /
     - name: Resume
-      slug: https://docs.google.com/document/d/1uVEKQkBt5hlOOZHhndw84KKXXm9KrzgH_wAgnsovfQY/edit?usp=sharing/copy
+      slug: https://docs.google.com/document/d/1uVEKQkBt5hlOOZHhndw84KKXXm9KrzgH_wAgnsovfQY/copy
     - name: Blog
       slug: https://medium.com/@sriramthinksaboutthings
     - name: Work
