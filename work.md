@@ -7,7 +7,7 @@ Here is a list of all the projects I have worked on :
 - Machine Learning 🤖
   - [ISL Python](https://github.com/sri-ram-swaminathan/ISL-Python)
   - [Spaceship Titanic and Decision Trees](https://github.com/sri-ram-swaminathan/Spaceship-Titanic-and-Decision-Trees)
-- Full Stack Data Science 🛩️
+- Full Stack Data Science 🤹🏽
   - NA
 - Artificial Intelligence 🧠
   - NA
