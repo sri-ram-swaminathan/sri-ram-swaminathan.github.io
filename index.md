@@ -24,9 +24,6 @@ I consider myself to be a detective 🕵🏽‍♂️, using Statistical Analysi
 							Working through Gilbert Strang's Linear Algebra textbook 
 					</li>
 					<li>
-							Mastering NumPy 
-					</li>
-					<li>
 							Learning Machine Learning
 					</li>
 					</ul>
