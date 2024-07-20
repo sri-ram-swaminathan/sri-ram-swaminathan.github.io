@@ -13,4 +13,4 @@ Here is a list of all the projects I have worked on :
   - NA
 - Miscellaneous 🎡
   - [Pokemon Card Generator](https://github.com/sri-ram-swaminathan/CS50P-Final-Project)
-  - [18.06 : Linear Algebra](https://drive.google.com/drive/folders/1KsOz4C3BS12Axjw83el6m5Mc5Qy5upHK?usp=sharing)
+  - [18.06 : Linear Algebra](https://drive.google.com/drive/folders/19bQ04vYDnS0toQTzao1992GsyCrOI_dg?usp=sharing)
