@@ -13,7 +13,7 @@ header:
   pages:
     - name: Home
       slug: /
-    - name: Resume
+    - name: CV
       slug: https://docs.google.com/document/d/1uVEKQkBt5hlOOZHhndw84KKXXm9KrzgH_wAgnsovfQY/copy
     - name: Blog
       slug: https://medium.com/@sriramthinksaboutthings
