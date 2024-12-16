@@ -307,54 +307,51 @@
     <!-- Bootstrap JS -->
     <script>// Function to fetch and display Medium blog posts
         async function fetchMediumPosts() {
-            try {
-                const feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@sriramthinksaboutthings';
-                const response = await fetch(feedUrl);
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.json();
-                const items = data.items;
-
-                let output = '';
-
-                items.forEach((item) => {
-                    const title = item.title;
-                    const link = item.link;
-                    const pubDate = new Date(item.pubDate).toLocaleDateString();
-                    const description = item.description.replace(/(<([^>]+)>)/gi, "").substring(0, 150) + '...';
-
-                    // Extract the first image from the content
-                    let image = 'default-image-url.jpg'; // Fallback to a default image if none is found
-                    const match = item.content.match(/<img.*?src="(.*?)"/); // Regex to find the first image src
-                    if (match && match[1]) {
-                        image = match[1];
-                    }
-
-                    output += `
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title"><a href="${link}" target="_blank">${title}</a></h5>
-                                <p class="card-text"><small class="text-muted">Published on ${pubDate}</small></p>
-                                <p class="card-text">${description}</p>
-                                <a href="${link}" target="_blank" class="btn btn-outline-dark">Read more</a>
-                            </div>
+    try {
+        const feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@sriramthinksaboutthings';
+        const response = await fetch(feedUrl);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        const items = data.items;
+        let output = '';
+        items.forEach((item) => {
+            const title = item.title;
+            const link = item.link;
+            const pubDate = new Date(item.pubDate).toLocaleDateString();
+            const description = item.description;
+            // Extract the first image from the content
+            let image = 'default-image-url.jpg'; // Fallback to a default image if none is found
+            const match = item.content.match(/<img.*?src="(.*?)"/); // Regex to find the first image src
+            if (match && match[1]) {
+                image = match[1];
+            }
+            output += `
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="${image}" class="img-fluid rounded-start" alt="Blog Post Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="${link}" target="_blank">${title}</a></h5>
+                            <p class="card-text"><small class="text-muted">Published on ${pubDate}</small></p>
+                            <p class="card-text">${description}</p>
+                            <a href="${link}" target="_blank" class="btn btn-outline-dark">Read more</a>
                         </div>
                     </div>
                 </div>
-            `;
-                });
-
-                document.getElementById('blogs').innerHTML = output;
-            } catch (error) {
-                console.error('Failed to fetch Medium posts:', error);
-                document.getElementById('blogs').innerHTML = '<p class="text-danger">Failed to load blog posts. Please try again later.</p>';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', fetchMediumPosts);
+            </div>
+        `;
+        });
+        document.getElementById('blogs').innerHTML = output;
+    } catch (error) {
+        console.error('Failed to fetch Medium posts:', error);
+        document.getElementById('blogs').innerHTML = '<p class="text-danger">Failed to load blog posts. Please try again later.</p>';
+    }
+}
+document.addEventListener('DOMContentLoaded', fetchMediumPosts);
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
