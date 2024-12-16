@@ -320,7 +320,6 @@
                     const title = item.title;
                     const link = item.link;
                     const pubDate = new Date(item.pubDate).toLocaleDateString();
-                    const description = item.description.replace(/(<([^>]+)>)/gi, "").substring(0, 150) + '...';
                     // Extract the first image from the content
                     let image = 'default-image-url.jpg'; // Fallback to a default image if none is found
                     const match = item.content.match(/<img.*?src="(.*?)"/); // Regex to find the first image src
@@ -334,8 +333,6 @@
                             <div class="card-body">
                                 <h5 class="card-title"><a href="${link}" target="_blank">${title}</a></h5>
                                 <p class="card-text"><small class="text-muted">Published on ${pubDate}</small></p>
-                                <p class="card-text">${description}</p>
-                                <a href="${link}" target="_blank" class="btn btn-outline-dark">Read more</a>
                             </div>
                         </div>
                     </div>
