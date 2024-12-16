@@ -320,7 +320,7 @@
                     const title = item.title;
                     const link = item.link;
                     const pubDate = new Date(item.pubDate).toLocaleDateString();
-                    const description = item.description;
+                    const description = item.description.replace(/(<([^>]+)>)/gi, "").substring(0, 150) + '...';
                     // Extract the first image from the content
                     let image = 'default-image-url.jpg'; // Fallback to a default image if none is found
                     const match = item.content.match(/<img.*?src="(.*?)"/); // Regex to find the first image src
