@@ -2,3 +2,23 @@
 layout: home
 author_profile: true
 ---
+
+[Hello There,](https://youtu.be/rEq1Z0bjdwc?si=iO_qPAG-NmHx5n2Z)
+<br>
+<br>
+My name is Sriram. I'm currently pursuing my Master's in Data Science at Maastricht University, Netherlands. 
+<br>
+<br>
+I consider myself a detective ... 
+<br>
+<br>
+When I am not hunched over a laptop you can find me engrossed in (i) animals (ii) books (iii) football (iv) art ...
+<br>
+<br>
+Currently I am : 
+<ul>
+    <li>Making my new year's habits stick</li>
+    <li>Learning about neural networks & language</li>
+    <li>Studying like my life depends on it</li>
+    <li>Debating writing a book</li>
+</ul>
