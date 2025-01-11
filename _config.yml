@@ -122,8 +122,8 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:mail.sriram@icloud.com
-    - label: "Linkedin"
-      icon: "fas fa-linkedin"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin-in"
       url: "https://linkedin.com/in/hisriram"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
