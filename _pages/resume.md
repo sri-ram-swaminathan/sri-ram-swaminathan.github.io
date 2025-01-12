@@ -14,10 +14,16 @@ author_profile: true
 
 - BSc Physics and Mathematics, Bangalore University \| 2021-2024
     - CGPA: 9.6/10
+
+
 ## Experience 
 🏗️
+
+
 ## Projects 
 🏗️
+
+
 ## Skills
 
 ### Programming Languages 
