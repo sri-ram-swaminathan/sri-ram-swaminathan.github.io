@@ -22,6 +22,16 @@ $(document).ready(function () {
     }
   });
 
+  // Progress Bar Script
+document.addEventListener('DOMContentLoaded', function() {
+  var progressBar = document.getElementById('progress-bar');
+  var totalHeight = document.body.scrollHeight - window.innerHeight;
+  window.onscroll = function() {
+    var progress = (window.scrollY / totalHeight) * 100;
+    progressBar.style.width = progress + '%';
+  };
+});
+
   // Search toggle
   $(".search__toggle").on("click", function () {
     $(".search-content").toggleClass("is--visible");
