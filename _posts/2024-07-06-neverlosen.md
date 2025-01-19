@@ -1,10 +1,7 @@
 ---
 title: "Neverlosen"
 categories:
-  - Technical 
-toc: true
-toc_sticky: true
-toc_title: "Table of Contents"
+  - Technical
 tags:
   - Football 
   - Data Visualization 
@@ -20,7 +17,7 @@ Here is some context before I start, Leverkusen are a professional football team
 
 Leverkusen’s achievement is impressive on it’s own. However, comparing it to something similar helps us understand it’s true significance. Going an entire season without losing a single match in football is quite rare, so there aren’t many examples to compare against. I chose to compare Leverkusen’s 2023–2024 season to [Arsenal’s 2003–2004](https://en.wikipedia.org/wiki/2003%E2%80%9304_Arsenal_F.C._season) season (Leverkusen were unbeaten in the Bundesliga and DFB Pokal, while Arsenal were unbeaten in the English Premier League).
 
-In the graphic below I have represented the match results of both teams across all the competitions that they participated in. Each box represents an individual match result. The table progresses chronologically from left to right, i.e. the first box in the first row is match number 1 and the last box in that row is match number 10. The color coding is as follows : green → win | gray → draw | red → loss.
+In the graphic below I have represented the match results of both teams across all the competitions that they participated in. Each box represents an individual match result. The table progresses chronologically from left to right, i.e. the first box in the first row is match number 1 and the last box in that row is match number 10. The color coding is as follows : green → win \| gray → draw \| red → loss.
 
 ![Form](/assets/img/neverlosen/2.jpg)
 Relative forms of the invincibles
