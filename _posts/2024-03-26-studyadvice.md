@@ -36,7 +36,7 @@ This is the advice I wish somebody gave me when I started to study all those yea
 - Never leave an exam early. Chances are you've made some silly mistakes, find them and deal with them when you can. Once completed, make your test more legible to read.  
 
 # Miscellaneous 
-- Nobody will care about your grades, unless they are bad. Get 85% on all courses, maintain close to a 4 GPA without over-study or under-study. use your limited time well, do things in the real world. Get internships & research projects, contribute to open source, improve a library, etc. 
+- Nobody will care about your grades, unless they are bad. Get 85% on all courses, maintain close to a 4 GPA without over-study or under-study. Use your limited time well, do things in the real world. Get internships & research projects, contribute to open source, improve a library, etc. 
 - Invest time in making & maintaining relationships with people. The word of a professor / recruiter can open doors otherwise inaccessible. 
 - Write out results while running in a text file and ensure you commit your changes. 
 - With regards to thesis : (i) pick a topic you know you can finish in 30% of the time, you'll probably make a poor estimate of how long it'll take & spill over anyways (ii) try to limit risks / aspects you have no control over, atleast factor them in your estimation ; (a) robotics (b) data mining (iii) "even bad results are results" is a blatant lie, on that note don't falsify results  
