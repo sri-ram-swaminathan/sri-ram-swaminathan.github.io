@@ -68,7 +68,6 @@ Once a Decision Tree is built, new data, on which predictions are to be made is 
 For example, a Decision Tree classifying animals is shown below. All the animals start out at the top and follow the conditions one by one till they reach a leaf node. We have now successfully built our tree. It is capable of classifying animals based on their color and height. To check it’s working we can use another animal (It’s funny to see that an shark would be classified as a monkey by this tree).
 
 ![Animal Classification](/assets/img/stitanic/7.jpg)
-A simple Decision Tree
 
 There are 2 mathematical formulae that govern the working of a Decision Tree, it is through these that the computer derives the features and their threshold values.
 
