@@ -10,7 +10,6 @@ tags:
 Growing up, I had a Pokemon card collection. The very good cards were hard to come by and it was near impossible to catch them all ! Now however .. :) I can finally complete my collection (well sort of).
 
 ![Card](/assets/img/pokemon/1.jpg)
-A card created using my code !
 
 I made this as part of my final project for [CS50 Python](https://cs50.harvard.edu/python/2022/). The input prompt looks as follows. After selecting either option the appropriate card is created in ~10 seconds. If the user is unsure, then a random pokemon of their requested type is generated.
 
