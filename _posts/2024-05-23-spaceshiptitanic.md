@@ -9,8 +9,6 @@ tags:
   - Machine Learning 
   - Decision Trees
 ---
-![Drawing](/assets/img/stitanic/1.jpg)
-This image was generated using Meta AI
 
 “The year is 2912, and interstellar travel is picking up speed. The Spaceship Titanic embarked on it’s maiden voyage a month ago, and sadly met the same fate as it’s namesake from 1,000 year ago. Although the ship is intact, about half the passengers have been transported to another dimension.
 
