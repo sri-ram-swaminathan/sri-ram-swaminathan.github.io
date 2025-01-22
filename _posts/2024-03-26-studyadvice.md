@@ -14,6 +14,8 @@ This is the advice I wish somebody gave me when I started to study all those yea
 - Be consistent with your studies. Discipline v/s Intelligence is like Tortoise v/s Hare. All-nighters are worth 0 extra points.
 - Courses in general aren't stand-alone; they build on previous knowledge. It doesn't make sense to half-ass anything you know will be required later.
 - Learn in public. Don't just consume, create. Write blogs and cheat sheets. Make the material you wish you had when you started.
+- Taking a break is crucial for peak performance. Schedule down time and be intentional about not working. Work hard and play hard.
+- Emphasize knowledge over credentials. It's important to have strong fundamentals. Also, don't find shortcuts in learning, good things take time.
 
 
 # Study 
