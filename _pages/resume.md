@@ -21,14 +21,14 @@ author_profile: true
 
 
 ## Projects 
-🏗️
 
+### Automatic recommendations of preparatory math courses
 
 ## Skills
 
 ### Programming Languages 
 
-- Python, SQL, LateX
+- Python, SQL, R, LaTeX
 
 ### Frameworks and libraries 
 
@@ -39,5 +39,5 @@ author_profile: true
 - AWS
 
 ### Machine Learning 
-- Supervised, Unsupervised, Deep Learning, Natural Language Processing
+- Supervised, Deep Learning, Natural Language Processing, Computer Vision
 
