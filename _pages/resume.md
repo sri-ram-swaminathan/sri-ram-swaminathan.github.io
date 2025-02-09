@@ -10,7 +10,7 @@ author_profile: true
 - MSc Data Science for Decision Making, Maastricht University \| 2025-2027
     - GPA:
     - Thesis:
-    - Key courses: Data Mining, Model Identification & Data Fitting, Computational Statistics, Algorithms for Big Data
+    - Key courses: Mathematical Optimisation, Computational Statistics, Algorithms for Big Data, Advanced Natural Language Processing, Computer Vision
 
 - BSc Physics and Mathematics, Bangalore University \| 2021-2024
     - CGPA: 9.6/10
