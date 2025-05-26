@@ -1,10 +1,13 @@
 ---
 title: "Philosophy of life"
 categories:
-  - Stories  
+  - Stories 
+toc: true
+toc_sticky: true
+toc_title: "Categories"
 ---
 
-# Miscellaneous 
+# On motivation
 
 Open until finished. Job’s not finished.
 
@@ -34,7 +37,9 @@ Outwork everyone.
 
 I had no fear when it came to basketball. What I mean by that is:  if I wanted to implement something new into my game, I’d see it and try incorporating it immediately. I wasn’t scared of missing, or looking bad, or being embarrassed. That’s because I always kept the long game in my mind. I always focused on the fact that I had to try something to get it, and once I got it, I’d have another tool in my arsenal. If the price was a lot of work and a few missed shots, I was ok with that. 
 
-# Yours truly 
+# On kindness and love 
+
+# By yours truly 
 
 I will build that castle, but today I lay a brick. 
 
