@@ -1,12 +1,7 @@
 ---
 title: "Philosophy of life"
 categories:
-  - Stories 
-toc: true
-toc_sticky: true
-toc_title: "Sources"
-tags:
-  - Motivation  
+  - Stories  
 ---
 
 # Miscellaneous 
