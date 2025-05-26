@@ -7,7 +7,7 @@ toc_sticky: true
 toc_title: "Categories"
 ---
 
-# On motivation
+# Hustle culture
 
 Open until finished. Job’s not finished.
 
@@ -37,7 +37,13 @@ Outwork everyone.
 
 I had no fear when it came to basketball. What I mean by that is:  if I wanted to implement something new into my game, I’d see it and try incorporating it immediately. I wasn’t scared of missing, or looking bad, or being embarrassed. That’s because I always kept the long game in my mind. I always focused on the fact that I had to try something to get it, and once I got it, I’d have another tool in my arsenal. If the price was a lot of work and a few missed shots, I was ok with that. 
 
-# On kindness and love 
+# Wholesome
+
+If you can't say something nice, don't say nothing at all. - Thumper 
+
+Let everything happen to you. Beauty and terror. Just keep going. No feeling is final. - Jojo Rabbit 
+
+It's only awkward if you make it. - m&m 
 
 # By yours truly 
 
