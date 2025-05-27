@@ -1,7 +1,7 @@
 ---
 title: "How I would learn if I could start over"
 categories:
-  - Technical
+  - Stories
 toc: true
 toc_sticky: true 
 toc_label: "Table of Contents"

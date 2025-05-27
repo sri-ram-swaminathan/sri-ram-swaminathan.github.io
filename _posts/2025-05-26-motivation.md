@@ -39,6 +39,8 @@ I had no fear when it came to basketball. What I mean by that is:  if I wanted t
 
 The time to fix the roof is when the sun is shining. 
 
+Want it all I won't leave a breadcrumb. 
+
 # Wholesome
 
 If you can't say something nice, don't say nothing at all. - Thumper 
