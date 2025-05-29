@@ -9,37 +9,41 @@ toc_title: "Categories"
 
 # Hustle culture
 
-Open until finished. Job’s not finished.
+Open until finished. Job’s not finished. - Kobe Bryant 
 
-What would you do if you weren’t afraid? 
+What would you do if you weren’t afraid? - Alex Hormozi
 
-Obsession beats talent every time. 
+Obsession beats talent every time. - Kobe Bryant 
 
-How many days did you empty your tank? 
+How many days did you empty your tank? - Alex Hormozi 
 
-Pain of regret > pain of discipline 
+Pain of regret > pain of discipline - Pinterest 
 
 "You ask me if an ordinary person—by studying hard—would get to be able to imagine these things like I imagine. Of course. I was an ordinary person who studied hard. There's no miracle people. It just happens they got interested in this thing, and they learned all this stuff. They're just people. There's no talent or special miracle ability to understand quantum mechanics or a miracle ability to imagine electromagnetic fields that comes without practice and reading and learning and study. So if you take an ordinary person who's willing to devote a great deal of time and study and work and thinking and mathematics, then he's become a scientist." - Richard P Feynman 
 
-It’s one slow clap in the auditorium for a very long time. 
+It’s one slow clap in the auditorium for a very long time. - Alex Hormozi
 
-Only two options is the hearse or we conquering. 
+Only two options is the hearse or we conquering. - Rush Hour by Hanumankind 
 
-People are jealous of the trophy, not the work. 
+People are jealous of the trophy, not the work. - Alex Hormozi 
 
-Figure out what you want. Ignore the opinions of others. Do so much volume that it would be unreasonable for you to be unsuccessful. 
+And excellent mean the extra work. - DNA by Kendrick Lamar
 
-Algebra’s like sheet music. The important thing isn’t can you read it. It’s can you hear it? Can you hear the music? 
+Figure out what you want. Ignore the opinions of others. Do so much volume that it would be unreasonable for you to be unsuccessful. - Alex Hormozi 
 
-अब राजा का बेटा राजा नहीं बनेगा ... अब राजा वही बनेगा जो हकदार होगा.
+Algebra’s like sheet music. The important thing isn’t can you read it. It’s can you hear it? Can you hear the music? - Neils Bohr in the movie Oppenheimer 
 
-Outwork everyone. 
+अब राजा का बेटा राजा नहीं बनेगा ... अब राजा वही बनेगा जो हकदार होगा. - Anand sir in the movie Super 30
 
-I had no fear when it came to basketball. What I mean by that is:  if I wanted to implement something new into my game, I’d see it and try incorporating it immediately. I wasn’t scared of missing, or looking bad, or being embarrassed. That’s because I always kept the long game in my mind. I always focused on the fact that I had to try something to get it, and once I got it, I’d have another tool in my arsenal. If the price was a lot of work and a few missed shots, I was ok with that. 
+Outwork everyone. - Kobe Bryant 
 
-The time to fix the roof is when the sun is shining. 
+I had no fear when it came to basketball. What I mean by that is:  if I wanted to implement something new into my game, I’d see it and try incorporating it immediately. I wasn’t scared of missing, or looking bad, or being embarrassed. That’s because I always kept the long game in my mind. I always focused on the fact that I had to try something to get it, and once I got it, I’d have another tool in my arsenal. If the price was a lot of work and a few missed shots, I was ok with that. - Kobe Bryant 
 
-Want it all I won't leave a breadcrumb. 
+The time to fix the roof is when the sun is shining. - John F Kennedy
+
+Want it all I won't leave a breadcrumb. - Redrum by 21 Savage
+
+I want the credit if we're loosing or winning on my mama that's the realest shit. - All the stars by Kendrick Lamar 
 
 # Wholesome
 
