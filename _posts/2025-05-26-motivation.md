@@ -7,6 +7,8 @@ toc_sticky: true
 toc_title: "Categories"
 ---
 
+A list of quotes and ideas I find inspiring. An incomplete list of things that have shaped me into the person I am today, and the person I aspire to be. 
+
 # Hustle culture
 
 Open until finished. Job’s not finished. - Kobe Bryant 
