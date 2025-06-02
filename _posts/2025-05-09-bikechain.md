@@ -3,9 +3,9 @@ title: "Half a donut and an undone cycle chain"
 categories:
   - Stories 
 ---
-> A memorable mini-adventure. My first attempt at poetry? 
+> A memorable mini-adventure. It's amazing how the smallest of things we do, things we don't think about can make somebody's day. I call it a poem-story, because the paragraphs are short and broken and there are a few stray rhymes too. 
 
-On this fine Friday afternoon, I cycled down to the closest stationary store from campus, located in the middle of a mini-mall not 6.5 minutes away. 
+On this fine Friday afternoon, I cycled down to the closest stationary store from campus, located in the middle of a mini-mall not 6 and a half minutes away. 
 
 I hopped back on my cycle after a quick route check, when I heard a ‘cheek’ and felt a small jolt under my feet, as my cycle chain fell loose. I was there to buy a felt-tip pen for an exam two weeks hence. 
 
