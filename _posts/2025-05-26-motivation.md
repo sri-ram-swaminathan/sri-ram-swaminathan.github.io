@@ -19,6 +19,8 @@ Obsession beats talent every time. - Kobe Bryant
 
 How many days did you empty your tank? - Alex Hormozi 
 
+हटो के मलने से मिलता नहीं रब से कुछ - Baazigar by Divine
+
 Pain of regret > pain of discipline - Pinterest 
 
 "You ask me if an ordinary person—by studying hard—would get to be able to imagine these things like I imagine. Of course. I was an ordinary person who studied hard. There's no miracle people. It just happens they got interested in this thing, and they learned all this stuff. They're just people. There's no talent or special miracle ability to understand quantum mechanics or a miracle ability to imagine electromagnetic fields that comes without practice and reading and learning and study. So if you take an ordinary person who's willing to devote a great deal of time and study and work and thinking and mathematics, then he's become a scientist." - Richard P Feynman 
@@ -28,6 +30,9 @@ It’s one slow clap in the auditorium for a very long time. - Alex Hormozi
 Only two options is the hearse or we conquering. - Rush Hour by Hanumankind 
 
 People are jealous of the trophy, not the work. - Alex Hormozi 
+
+![Optimism](/assets/img/motivation/optimism.jpeg)
+T-shirt quotes go hardest. 
 
 And excellent mean the extra work. - DNA by Kendrick Lamar
 
@@ -46,6 +51,8 @@ The time to fix the roof is when the sun is shining. - John F Kennedy
 Want it all I won't leave a breadcrumb. - Redrum by 21 Savage
 
 I want the credit if we're loosing or winning on my mama that's the realest shit. - All the stars by Kendrick Lamar 
+
+सपने होते सच, तब मजा आता सोने में - 3:59 AM by Divine 
 
 # Wholesome
 
