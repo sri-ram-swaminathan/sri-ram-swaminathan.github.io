@@ -19,7 +19,7 @@ Obsession beats talent every time. - Kobe Bryant
 
 How many days did you empty your tank? - Alex Hormozi 
 
-हटो के मलने से मिलता नहीं रब से कुछ - Baazigar by Divine
+हाथो के मलने से मिलता नहीं रब से कुछ - Baazigar by Divine
 
 Pain of regret > pain of discipline - Pinterest 
 
@@ -61,6 +61,17 @@ If you can't say something nice, don't say nothing at all. - Thumper
 Let everything happen to you. Beauty and terror. Just keep going. No feeling is final. - Jojo Rabbit 
 
 It's only awkward if you make it. - m&m 
+
+[8 ways that money can buy happiness](https://scholar.harvard.edu/files/danielgilbert/files/if-money-doesnt-make-you-happy.nov-12-20101.pdf): 
+
+- buy more experiences and fewer material goods; we adapt to experiences slower and revisit (look forward) experiences more fondly & more often
+- use your money to benefit others and not yourself; buying a first class plan ticket for somebody you care about > buying a first class plane ticket for yourself, we are bad at predicting how much spending on others affects us  
+- buy many small pleasures instead of few large ones; frequent doses of lovely things > infrequent does of lovelier things, bi-weekly merry-go-round leads to more happiness than annual roller coaster
+- appreciate the mundane joys of daily life; wealthy individuals lose this with constant exposure to luxury and are worse off for it
+- delay consumption; happiness from having the thing + happiness from waiting for it
+- think about what you're not thinking about; a beach home means ocean breeze and mosquitoes a plenty, a view of the ocean and meeting plumbers on weekends, factor in the day-to-day 
+- beware of comparison shopping; don't overstate the differences and understate the similarities
+- pay close attention to the happiness of others; are people who bought said thing indeed happier for it?
 
 # By yours truly 
 
