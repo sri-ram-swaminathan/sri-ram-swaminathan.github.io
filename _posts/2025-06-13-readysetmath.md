@@ -71,7 +71,7 @@ The questions generated of of two main types, as discussed below.
 Two instances of the same parameterized question on different tests
 
 ![](/assets/img/rp1/hard.jpg)
-Hard-coded questions
+Some hard-coded questions
 
 ## Recommendation algorithm
 
@@ -200,6 +200,7 @@ While this article explains everything thoroughly, I find watching the applicati
 # Appendix
 
 ![](/assets/img/rp1/table.png)
+
 Randomness and estimated variants for all parametrized questions 
 
 Here, the probability that two questions from the same type are different is 
