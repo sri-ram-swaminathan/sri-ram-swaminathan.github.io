@@ -41,7 +41,7 @@ The test is hosted as a website, created using [Streamlit](https://streamlit.io/
 
 The student navigates through the following pages in sequence on the website: login $\to$ subject familiarity $\to$ test questions $\to$ recommendations + student dashboard.  
 
-We implement basic regular expressions at the login page to check for valid names and student emails. The familiarity page asks the students to pick one of two familiarities ("Never studied", "Studied before") for 5 Mathematics topics. The student sees questions only for those topics that they have seen before, while topics never seen before are marked as incorrect. 
+We implement basic regular expressions at the login page to check for valid names and student emails. The familiarity page asks the students to pick one of two familiarities ("Never studied", "Studied before") for 5 Mathematics topics. The student sees questions only for those topics that they have seen before, while no questions are shown for topics reported as "Never studied". We mark all those questions as incorrect in the final results.
 
 Since the students are required to enter their answers in Python syntax, a dedicated drop down button titled "Math Notation Help" is provided at the top right of the test page, providing help for inputting user answers. These contain support for all the symbols that a student will require for this test. 
 
