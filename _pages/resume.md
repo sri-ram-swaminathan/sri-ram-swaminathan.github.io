@@ -24,6 +24,17 @@ author_profile: true
 
 ### Automatic recommendations of preparatory math courses
 
+#### Group project @ Maastricht University
+
+[Detailed article](https://sriramswaminathan.com/technical/readysetmath/) | [YouTube demo](https://www.youtube.com/watch?v=USG7Er_YHTM)
+
+A website that delivers randomized math tests for each student and uses a custom algorithm to send personalized recommendations via email based on their results.
+
+- Implemented recommendation algorithm based on custom priority scores 
+- Created no code-dashboard to help professors analyze all students results (.csv sent in email)
+- Contributed to website creation, question generation logic, email delivery and overall debugging
+
+
 ## Skills
 
 ### Programming Languages 

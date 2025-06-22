@@ -195,7 +195,7 @@ While our solution works well, here are the most important directions for future
 - **No memory:** Since we don't store any student data, the test and recommendations are a one time tool. If we were able to store the student's results, this test (informed on user and past scores) could be taken again as a way to objectively measure the improvement in the student's ability due to the intervention. Only questions from sections that require help could be asked, and many more visuals could be provided to the student and teacher's in addition. Since giving tests, receiving immediate feedback & follow-up advice is the best way to learn, using this tool iteratively throughout the entire course would be ideal. 
 
 Thank you for reading the entire article, I appreciate it a lot :) 
-While this article explains everything thoroughly, I find watching the application in action is a lot more magical and illustrative. A 5 minute demo of our project can be found [here](). 
+While this article explains everything thoroughly, I find watching the application in action is a lot more magical and illustrative. A 7 minute demo of our project can be found [here](https://www.youtube.com/watch?v=USG7Er_YHTM). 
 
 # Appendix
 
