@@ -22,11 +22,11 @@ author_profile: true
 
 ## Projects 
 
-### Automatic recommendations of preparatory math courses
+### Automatic recommendations of preparatory math courses 
 
-#### Group project @ Maastricht University
+Group research project @ Maastricht University 
 
-[Detailed article](https://sriramswaminathan.com/technical/readysetmath/) | [YouTube demo](https://www.youtube.com/watch?v=USG7Er_YHTM)
+[Detailed article](https://sriramswaminathan.com/technical/readysetmath/) \| [YouTube demo](https://www.youtube.com/watch?v=USG7Er_YHTM)
 
 A website that delivers randomized math tests for each student and uses a custom algorithm to send personalized recommendations via email based on their results.
 
