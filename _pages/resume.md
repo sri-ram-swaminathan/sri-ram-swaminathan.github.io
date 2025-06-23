@@ -26,7 +26,7 @@ author_profile: true
 
 [Detailed article](https://sriramswaminathan.com/technical/readysetmath/) \| [YouTube demo](https://www.youtube.com/watch?v=USG7Er_YHTM)
 
-A website that delivers randomized math tests for each student and uses a custom algorithm to send personalized recommendations via email based on their results.
+A website that delivers randomized math tests for each student and uses a custom algorithm to send personalized recommendations via email based on their results. This was a group project @ Maastricht University. 
 
 - Implemented recommendation algorithm based on custom priority scores 
 - Created no code-dashboard to help professors analyze all students results (.csv sent in email)
