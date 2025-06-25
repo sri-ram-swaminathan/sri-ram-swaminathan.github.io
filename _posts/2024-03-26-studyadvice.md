@@ -4,7 +4,7 @@ categories:
   - Stories
 toc: true
 toc_sticky: true 
-toc_label: "Table of Contents"
+toc_label: "Contents"
 ---
 
 This is the advice I wish somebody gave me when I started to study all those years ago. I hope this can add some value for you.  

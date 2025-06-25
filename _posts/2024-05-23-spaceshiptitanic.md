@@ -4,7 +4,7 @@ categories:
   - Technical 
 toc: true
 toc_sticky: true
-toc_title: "Table of Contents"
+toc_title: "Contents"
 tags:
   - Machine Learning 
   - Decision Trees
