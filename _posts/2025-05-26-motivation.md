@@ -54,6 +54,8 @@ I want the credit if we're loosing or winning on my mama that's the realest shit
 
 सपने होते सच, तब मजा आता सोने में - 3:59 AM by Divine 
 
+You don't get into something to test the waters, you get into something to make waves - 
+
 # Wholesome
 
 If you can't say something nice, don't say nothing at all. - Thumper 
