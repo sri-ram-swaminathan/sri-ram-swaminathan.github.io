@@ -35,10 +35,9 @@ The digit is simply the neuron with highest activation.
 Every good machine learning algorithm needs a loss function, a way to quantify it's performance, and get better. Here, since we are trying to classify digits, classification accuracy could be a good choice right? Well ... not exactly, remember how we want to see small changes in the output as we make small changes to the input? That only works if our loss function is "smooth", or more formally continuous. 
 
 So, we stick to the mean squared loss. The formula for which is 
+
 $$ 
-
 L(w,b) = \frac{1}{n} \sum_{i}^{n} (\hat{y}-y)^{2}
-
 $$
 
 
@@ -50,7 +49,7 @@ Phew that was a lot, let's take a simple example and make sense of it. This will
 
 ![](/assets/img/nn/nn%20matrix.jpg)
 
-Here $$ \textcolor{Orange}{w_{11}^{5}} $$
+Here $$\textcolor{Orange}{w_{11}^{5}}$$
 
 
 
