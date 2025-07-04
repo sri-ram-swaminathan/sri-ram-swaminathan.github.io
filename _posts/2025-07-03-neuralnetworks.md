@@ -49,7 +49,7 @@ Phew that was a lot, let's take a simple example and make sense of it. This will
 
 ![](/assets/img/nn/nn%20matrix.jpg)
 
-Here $\textcolor{Orange}{w_{11}^{5}}$
+Here $\color{Orange}{w_{11}^{5}}$
 
 
 
