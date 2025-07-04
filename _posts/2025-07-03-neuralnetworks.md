@@ -36,7 +36,9 @@ Every good machine learning algorithm needs a loss function, a way to quantify i
 
 So, we stick to the mean squared loss. The formula for which is 
 $$ 
+
 L(w,b) = \frac{1}{n} \sum_{i}^{n} (\hat{y}-y)^{2}
+
 $$
 
 
@@ -48,7 +50,7 @@ Phew that was a lot, let's take a simple example and make sense of it. This will
 
 ![](/assets/img/nn/nn%20matrix.jpg)
 
-Here $\textcolor{Orange}{w_{11}^{5}}$
+Here $$ \textcolor{Orange}{w_{11}^{5}} $$
 
 
 
