@@ -173,7 +173,7 @@ $$
 
 $$
 
-The gradient of the cost wrt the bias 
+The gradient of the cost with respect to the bias 
 
 $$
 \begin{equation}
@@ -182,7 +182,8 @@ $$
 
 $$
 
-The gradient of the cost wrt the weight
+The gradient of the cost with respect to the weight
+
 $$
 \begin{equation}
 
