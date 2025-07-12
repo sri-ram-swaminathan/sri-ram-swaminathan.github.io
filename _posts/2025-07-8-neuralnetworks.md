@@ -39,7 +39,7 @@ We will stick to the sigmoid "squishification" function. Coding it up is straigh
 
 ```python
 def sigmoid(z):
-    return 1 / (1+exp(z))
+    return 1 / (1+exp(-z))
 
 def sigmoid_prime(z):
     return sigmoid(z) * (1 - sigmoid(z))
@@ -47,7 +47,13 @@ def sigmoid_prime(z):
 
 These two ideas, (i) multiple connected neurons and (ii) non-linear predictions, combine in such a way that a neural network can predict complex non-linear functions using very simple single non-linear blocks. 
 
-Let's walk through a grossly oversimplified neural network that classifies a dog as cute or not, taking in as input the size of the dog's eyes in the picture. 
+```python 
+def feedforward(self,a):
+  for w,b in zip(self.weights, self.biases):
+    a = sigmoid(np.dot(w,a) +b) # Recursively computes activations for each layer and "feeds-forward" ; use a1 as input for layer 2, and so on
+  return a 
+```
+Let's walk through a grossly oversimplified neural network that classifies a dog as cute or not, to understand the prediction mechanism. 
 
 
 
@@ -67,14 +73,41 @@ $$
 L = \frac{1}{n} \sum_{i}^{n} (\hat{y}-y)^{2}
 $$
 
-In our case, this would measure how far away our estimates are, by calculating the difference in predicted activation responses to true activation responses. 
+In our case, this would measure how far away our estimates are, by calculating the difference in predicted activation responses to true activation responses.
 
-# Backpropogation under the hood
+```python 
+def update_mini_batch(self, mini_batch, eta):# Update the weight's and biases using average of gradients from each training example
+        nabla_b = [np.zeros(b.shape) for b in self.biases]
+        nabla_w = [np.zeros(w.shape) for w in self.weights]
+        for (x,y) in mini_batch:
+            delta_nabla_b, delta_nabla_w = self.backprop(x,y) # Gradients with respect to biases and weights for example (x,y)
+            nabla_b = [nb+dnb for (nb,dnb) in zip(nabla_b, delta_nabla_b)] # Add up all the gradients from all the training examples
+            nabla_w = [nw+dnw for (nw,dnw) in zip(nabla_w, delta_nabla_w)]
+        self.weights = [w - (eta/len(mini_batch))*nw for (w,nw) in zip(self.weights, nabla_w)] # Subtract the average gradients
+        self.biases = [b - (eta/len(mini_batch))*nb for (b,nb) in zip(self.biases, nabla_b)]
 
+``` 
 
-## Notation and equations 
+In practice, computing the gradient for every single training example then summing them up is computationally expensive. Hence, we make an assumption and train it using stochastic gradient descent. 
 
-Now comes the scary calculus :') Let's start by discussing notation, like good math boys. 
+```python 
+def SGD(self, training_data, epochs, mini_batch_size, eta, test_data=None): # Train neural network using stochastic gradient descent
+        if test_data: n_test = len(test_data)
+        n = len(training_data)
+        for j in range(epochs): # Repeat all the steps below for required number of epochs
+            random.shuffle(training_data)
+            mini_batches = [training_data[k:k+mini_batch_size] for k in range(0,n,mini_batch_size)] # Get splits of data in mini batch sizes
+            for mini_batch in mini_batches:
+                self.update_mini_batch(mini_batch, eta) # Update the weights and biases according to the average gradient of that mini batch
+            if test_data:
+                print(f"Epoch {j} accuracy: {self.evaluate(test_data)}/{n_test}")
+            else:
+                print(f"Epoch {j} complete")
+```
+
+# Architecture and notation
+
+Let's start by discussing notation, like good math boys.  
 
 The weight connecting the $k^{th}$ neuron in layer $l$ to the $j^{th}$ neuron in layer $l-1$ is denoted by $w_{jk}^{l}$. The bias of the $j^{th}$ neuron in the $l^{th}$ layer is given by $b_{j}^{l}$. Similarly activation of the $j^{th}$ neuron in the $l^{th}$ layer is given by $a_{j}^{l}$
 
@@ -135,9 +168,40 @@ $a_{j}^{l} = \sigma(\sum_{k} w_{jk}a_{k}^{l-1} + b_{j}^{l}) = \sigma(z_{j}^{l})$
 
 Here $z_{j}^{l}$ is an intermediate variable representing the input that neuron $j$ at layer $l$ receives. 
 
-The program of backpropogation is to find the gradient of the cost function with respect to the weights and biases. The hope then is to adjust those weights and biases by nudging them in the direction opposite to the gradient. 
+Notice that the number of rows = number of neurons in layer $l$ while the number of columns = number of neurons in layer $l-1$. Going across a row we find all the weights required for $a_{j}^{l}$ While going down a column $k$ tells us all the weights associated with $a_{k}^{l-1}$. Let's also consider the transpose of this matrix. 
 
-Since, the weights and biases we need are all captured in $z_{j}^{l}$. We can first see how making a small change to the input to the neuron, $z_{j}^{l} + \color{Blue}\Delta z_{j}^{l}$ affects the final cost, then work our way back to catch the responsible weights and biases. 
+$$
+(w^{5})^{T} = 
+
+\begin{pmatrix}
+
+\color{Blue}w_{11}^{5} & \color{Blue}w_{21}^{5} \\
+
+\color{Green}w_{12}^{5} & \color{Green}w_{22}^{5} \\
+
+\color{Orange}w_{13}^{5} & \color{Orange}w_{23}^{5} 
+
+\end{pmatrix}
+$$
+
+Here, Notice that the number of rows = number of neurons in layer $l-1$ while the number of columns = number of neurons in layer $l$. Going across a row we find all the weights required for $a_{j}^{l-1}$ While going down a column $k$ tells us all the weights associated with $a_{k}^{l}$. This gives us a way to go from $l+1 \to l$, a map for walking backwards. 
+
+With all the linear algebra in place, we define the basic structure of our neural network! We won't be defining any individual neurons, since we only care about the weights and biases. 
+
+
+```python
+class Network(self, sizes):
+  self.num_layers = len(sizes)
+  self.sizes =  sizes
+  self.biases = [np.random.randn(y,1) for y in sizes[1:]] # Input layer comes w/o bias
+  self.weights = [np.random.randn(y,x) for x,y in zip(sizes[:-1], sizes[1:])] # One weight matrix b/w two successive hidden layers 
+```
+
+# Backpropagation under the hood 
+
+Now comes the scary calculus :') The program of backpropagation is to understand how the cost function would change for small changes in individual weights and biases. With this information we can change the culprits responsible for sub-par performance. 
+
+Since, the weights and biases we need are all captured in $z_{j}^{l}$. We can first see how making a small change to the input to the neuron, $z_{j}^{l} + \color{Blue}{\Delta z_{j}^{l}}$ affects the final cost, then work our way back to catch the responsible weights and biases. 
 
 Therefore, we define the error of neuron $j$ at layer $l$ to be $\delta_{j}^{l} = \frac{\partial C}{\partial z_{j}^{l}}$. We will the use some calculus to derive $\frac{\partial C}{\partial w_{jk}^{l}}$ and $\frac{\partial C}{\partial b_{j}^{l}}$ 
 
@@ -151,7 +215,7 @@ The many moving parts and their relations. Credit: [3Blue1Brown](https://www.3bl
 Without further ado, the four equations of backpropagation are: 
 
 
-The error in the output layer 
+> The error in the output layer 
 
 $$
 
@@ -164,39 +228,6 @@ $$
 
 $$
 
-The error in layer $l$ as a function of the error in layer $l+1$ 
-
-$$
-\begin{equation}
-\delta_{j}^{l} = \sum_{k} w_{kj}^{l+1} \delta_{k}^{l+1} \cdot \sigma'(z_{j}^{l})
-\end{equation}
-
-$$
-
-The gradient of the cost with respect to the bias 
-
-$$
-\begin{equation}
-\frac{ \partial C}{\partial b_{j}^{l}} = \delta_{j}^{l}
-\end{equation}
-
-$$
-
-The gradient of the cost with respect to the weight
-
-$$
-\begin{equation}
-
-\frac{ \partial C}{\partial w_{jk}^{l}} = \delta_{j}^{l}  \cdot a_{k}^{l-1}
-\end{equation}
-
-$$
-
-
-## Proofs
-
-
-> Equation 1
 
 We know how the cost relates to the final activation, and how the activation relates to it's input. In particular: 
 
@@ -206,7 +237,16 @@ Applying the chain rule we get that
 
 $\frac{\partial C}{\partial z_{j}^{L}} = \frac{\partial C}{ \partial a_{j}^{L}} \cdot \frac{\partial a_{j}^{L}}{\partial z_{j}^{L}} = \frac{\partial C}{ \partial a_{j}^{L}} \cdot \sigma'(z_{j}^{L})$ 
 
-> Equation 2 
+
+
+> The error in layer $l$ as a function of the error in layer $l+1$ 
+
+$$
+\begin{equation}
+\delta_{j}^{l} = \sum_{k} w_{kj}^{l+1} \delta_{k}^{l+1} \cdot \sigma'(z_{j}^{l})
+\end{equation}
+
+$$
 
 This is a little trickier. We need to think about how the error at layer $l$ propagates to the next layer. Let's visualize what's happening
 
@@ -232,8 +272,26 @@ Substituting it back proves the second equation
 
 $\delta_{j}^{l} = \sum_{k} w_{kj}^{l+1} \delta_{k}^{l+1} \cdot \sigma'(z_{j}^{l})$
 
-> Equations 3 and 4 
 
+> The gradient of the cost with respect to the bias 
+
+$$
+\begin{equation}
+\frac{ \partial C}{\partial b_{j}^{l}} = \delta_{j}^{l}
+\end{equation}
+
+$$
+
+> The gradient of the cost with respect to the weight
+
+$$
+\begin{equation}
+
+\frac{ \partial C}{\partial w_{jk}^{l}} = \delta_{j}^{l}  \cdot a_{k}^{l-1}
+\end{equation}
+
+$$
+ 
 Recall that $\delta_{j}^{l} = \frac{\partial C}{\partial z_{j}^{l}}$, where $z_{j}^{l} = \sum_{k} w_{jk}^{l} a_{k}^{l-1} + b_{j}^{l}$ 
 
 All we need to do now is follow the appropriate chain, once to the bias and once to the weight
@@ -242,7 +300,10 @@ $\frac{\partial C}{\partial b_{j}^{l}} = \frac{\partial C}{\partial z_{j}^{l}} \
 
 $\frac{\partial C}{\partial w_{jk}^{l}} = \frac{\partial C}{\partial z_{j}^{l}} \cdot \frac{\partial z_{j}^{l}}{\partial w_{jk}^{l}} = \delta_{j}^{l} \cdot a_{k}^{l-1}$  
 
-## Algorithm
+These are the equations expressed component wise. In actual practice, all this is done using matrices and linear algebra. The four equations in matrix notation are displayed below. 
+
+![](/assets/img/nn/actualequations.png)
+Credit: [Michael Nielsen](http://neuralnetworksanddeeplearning.com/chap2.html)
 
 With the four equations in place, I hope it's clear why it's called "back"propagation. We first compute the activations forward, and then start at the error of the final layer, then use that to compute the errors of all the previous layers, one by one. With the errors in place, we find out the gradient of the cost with respect to all the weights and biases. 
 
@@ -258,14 +319,43 @@ Here's the logic in pseudocode:
 
 5. Gradient: use the error vector for each layer to find $\frac{ \partial C}{\partial b_{j}^{l}}$ and $\frac{ \partial C}{\partial w_{jk}^{l}}$ 
 
+The actual implementation is: 
+
+```python 
+def backprop(self, x, y):
+        zs = [] # Store all the inputs to the neurons
+        activations = [x] # Store all the activations, need the input for the first cost gradient wrt weight and bias
+        activation = x
+        for w,b in zip(self.weights, self.biases): # Feedfoward the input till the final layer
+            z = np.dot(w, activation) + b
+            zs.append(z)
+            activation = sigmoid(z)
+            activations.append(activation)
+        # Compute the error of the final layer
+        delta = self.cost_derivative(activations[-1], y) * sigmoid_prime(zs[-1])
+        # Store all the derivatives in the corrrectly shaped matrices
+        nabla_b = [np.zeros(b.shape) for b in self.biases]
+        nabla_w = [np.zeros(w.shape) for w in self.weights]
+        # Backpropagate the erorr to all layers, except the first
+        for l in range(2, self.num_layers):
+            z = zs[-l]
+            sp = sigmoid_prime(z)
+            delta = np.dot(self.weights[-l+1].transpose(), delta) * sp # Updates delta at each step, so we don't need to store a list of the errors
+            nabla_b[-l] = delta
+            nabla_w[-l] = np.dot(delta, activations[-l-1].transpose())
+        return (nabla_b, nabla_w)
+
+def cost_derivative(self, final_activation, y): # Partial derivative of the cost with respect to the final activation
+        return (final_activation - y)
+```
 
 # Resources 
 
-It took me ~24 hours (over two weeks) to understand everything that is in this post. This is a heavily condensed version of the many things I've learnt. 
+It took me ~24 hours (over two weeks) to understand everything that is in this post. While the code is short and seems straightforward, there are many tricky aspects to it, with many crucial subtleties. I would highly recommend proving all 4 equations, then writing all the code yourself to internalize why and how neural networks work.  
 
-I learnt all the things I needed (code, theory and intuition) from free resources on the internet. The quality of information available online is baffling, I am deeply grateful for their work. In no particular order here are the awesome resources I used: 
+This is a heavily condensed version of the many things I've learnt. All the theory, code and intuition was available as free resources on the internet. The quality of information available online is baffling, I am deeply grateful for their work. In no particular order here are the awesome resources I used: 
 
-- [Michael Nielsen](http://neuralnetworksanddeeplearning.com/): best introductory text for theory
+- [Michael Nielsen](http://neuralnetworksanddeeplearning.com/): best introductory text for both theory and code, with excellent questions written in a lucid manner
 -  [3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi): the undisputed king of visuals and intuition 
-- [Andrej Karpathy](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ): you will atually enjoy coding and debugging  
+- [Andrej Karpathy](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ): you will actually enjoy coding and debugging  
 - [Sebastian Lague](https://youtu.be/hfMk-kjRv4c?si=G0vIZdvDvSeiPuzN): a very elaborate and detailed experiment, taught from first principles & explained marvelously 
