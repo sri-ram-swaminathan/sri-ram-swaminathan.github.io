@@ -9,7 +9,7 @@ toc_title: "Contents"
 
 > A neural network built from the ground up to solve digit recognition. I motivate theory and follow it up with code implementations. An in depth study of the 4 equations of backpropagation is provided at the end.  
 
-# What's wrong with classical machine learning? 
+# Introduction and making predictions 
 
 ![](/assets/img/nn/mnist_example.png)
  
@@ -20,9 +20,6 @@ And this is just for 9 digits. Imagine the complexity of rule-based system for s
 The classical machine learning algorithms we have seen so far, from [Linear Regression](https://sriramswaminathan.com/technical/ch3/) till [Support Vector Machines](https://sriramswaminathan.com/technical/ch9/) have been interpretable. And while they are machine learning in the sense that they get better with data, superior performance is found by hand-crafting features and rules, turning knobs and dials based on human knowledge. 
 
 Neural networks are based on a completely different type of learning algorithm. One in which the tweaks to the parameters of the network are built into the learning algorithm. We completely do away with rules and interpretability, trading it on for an unbiased system that can learn most non-linear functions out there. The drawback being that it requires large data & compute, explaining why neural networks only gained traction from 2006 while the algorithms were developed all they way back in 1980. 
-
-
-# Making predictions 
 
 A neural network is just another function estimator (albeit a good one), it takes in some input and creates some output. The structure / method in which a neural network is shown below: 
 
@@ -59,13 +56,13 @@ Let's walk through a grossly oversimplified neural network that classifies a dog
 
 # How will it learn? 
 
-Every good machine learning algorithm needs a loss function, a way to quantify it's performance, and get better. Here, since we are trying to classify digits, classification accuracy could be a good choice right? Well ... not exactly, we would like to impose three main conditions: 
+Every good machine learning algorithm needs a cost function, a way to quantify it's performance, and get better. This cost function depends on a very large number of parameters. Finding out how these parameters influence the cost (and therefore the model's performance) is the perineal problem of computer scientists. Here, the lower the cost the better. 
 
-1. The cost function can be written as an average $C = \frac{1}{n} \sum_{x=1}^{n} C_{x}$ where $C_{x}$ is the cost per training example 
+Here, since we are trying to classify digits, classification accuracy could be a good choice right? Well ... not exactly, we would like to impose two conditions on our cost function: 
 
-2. The cost function can be written as a function of the outputs of the network 
+1. The cost function can be written as a function of the outputs of the network 
 
-3. The cost function is "smooth" or continuous, so that small changes in the input produce small changes in the output
+2. The cost function is "smooth" or continuous, so that small changes in the input produce small changes in the output
 
 With all these ideas in place, the mean squared error loss, is a good loss function.  
 
@@ -73,7 +70,54 @@ $$
 L = \frac{1}{n} \sum_{i}^{n} (\hat{y}-y)^{2}
 $$
 
+Where $\hat{y}$ is the neural network's prediction, and $y$ is the true label for that observation. So our output layer would have 10 neurons, and the neuron with highest activation would be our models' prediction.   
+
 In our case, this would measure how far away our estimates are, by calculating the difference in predicted activation responses to true activation responses.
+
+Insert image 
+
+We turn now to one optimizing or lowering the cost, indeed the most popular method used in Deep Learning, gradient decent. The idea is best visualized in 2-dimensions. Imagine that all the values that the cost function can take forms a mountain. This mountain has peaks and valleys, and we would like to end up at the lowest valley, reduce the cost as much as possible. 
+
+Insert image 
+
+Imagine you are at a random point on this mountain, and you want to know the direction of your next step, the best step you could take. A step that decreases your height the most. Mathematical wizardry makes this possible. Th gradient of a function, denoted $\nabla C$ tells us the direction to step in, and also the size of our step. I will explain this with an example:
+
+$$ 
+
+\nabla C = 
+
+\begin{pmatrix}
+\color{Blue}{+2.00} \\
+\color{Red}{-0.30}
+\end{pmatrix}
+$$
+
+Here each row represents one particular direction or dimension. The large positive magnitude indicates we need to take a big positive step in that direction. While the small negative magnitude indicated we need to take a small negative step in the other. 
+
+A little caveat, the gradient tells us the direction of steepest ascent. So we just walk teh opposite way. Ah, we now have a simple update rule
+
+$$
+x_{n+1} = x_{n}
+ - \eta \nabla f_{x}
+ 
+ \\
+ 
+y_{n+1} = y_{n}
+ - \eta \nabla f_{y} $$
+
+he factor eta ($\eta$) is called the learning rate, something that controls how quickly we converge (if we do) to a local minimum or valley. 
+
+A neural network is defined by it's weights and biases, the dimensions of the cost function. Hence, in our case, the update rule looks like: 
+
+$$
+
+w_{n+1} = w_{n} - \nabla C_{w}
+\\
+b_{n+1} = b_{n} - \nabla C_{b}
+
+$$
+
+Each training example would nudge the weights in a different direction, and if we changed them according to just one example, it would be good at predicting a single digit, say like a 9 or an 8. But we want our network to predict all digits better, and so we take an average gradient over all the examples we have seen. Wishing that the network does a better job at capturing all digits. 
 
 ```python 
 def update_mini_batch(self, mini_batch, eta):# Update the weight's and biases using average of gradients from each training example
@@ -85,10 +129,15 @@ def update_mini_batch(self, mini_batch, eta):# Update the weight's and biases us
             nabla_w = [nw+dnw for (nw,dnw) in zip(nabla_w, delta_nabla_w)]
         self.weights = [w - (eta/len(mini_batch))*nw for (w,nw) in zip(self.weights, nabla_w)] # Subtract the average gradients
         self.biases = [b - (eta/len(mini_batch))*nb for (b,nb) in zip(self.biases, nabla_b)]
+```  
 
-``` 
+In practice, computing the (very high dimensional) gradient for every single training example then summing them updating the weights and biases turns out to be computationally expensive. 
 
-In practice, computing the gradient for every single training example then summing them up is computationally expensive. Hence, we make an assumption and train it using stochastic gradient descent. 
+We now make one last assumption to help us:
+
+3. The cost function can be written as an average $C = \frac{1}{n} \sum_{x=1}^{n} C_{x}$ where $C_{x}$ is the cost per training example 
+
+We trade in preciseness for practicality, and get an answer that's approximately right. Doing the training in such batches is called stochastic gradient decent, and is the norm for training Deep Learning methods.  
 
 ```python 
 def SGD(self, training_data, epochs, mini_batch_size, eta, test_data=None): # Train neural network using stochastic gradient descent
@@ -175,11 +224,11 @@ $$
 
 \begin{pmatrix}
 
-\color{Blue}w_{11}^{5} & \color{Blue}w_{21}^{5} \\
+\color{Blue}{w_{11}^{5}} & \color{Blue}{w_{21}^{5}} \\
 
-\color{Green}w_{12}^{5} & \color{Green}w_{22}^{5} \\
+\color{Green}{w_{12}^{5}} & \color{Green}{w_{22}^{5}} \\
 
-\color{Orange}w_{13}^{5} & \color{Orange}w_{23}^{5} 
+\color{Orange}{w_{13}^{5}} & \color{Orange}{w_{23}^{5}} 
 
 \end{pmatrix}
 $$
@@ -190,11 +239,12 @@ With all the linear algebra in place, we define the basic structure of our neura
 
 
 ```python
-class Network(self, sizes):
-  self.num_layers = len(sizes)
-  self.sizes =  sizes
-  self.biases = [np.random.randn(y,1) for y in sizes[1:]] # Input layer comes w/o bias
-  self.weights = [np.random.randn(y,x) for x,y in zip(sizes[:-1], sizes[1:])] # One weight matrix b/w two successive hidden layers 
+class Network():
+    def __init__(self, sizes):
+        self.num_layers = len(sizes)
+        self.sizes = sizes # Example [2,3,1] means 2 neurons in first layer, 3 neurons in the hidden layer and 1 neuron in output layer
+        self.biases = [np.random.randn(y,1) for y in sizes[1:]] # One bias vector per layer, example: [0.6,0.8,0.3] for layer #2
+        self.weights = [np.random.randn(y,x) for x,y in zip(sizes[:-1], sizes[1:])] # One weight matrix per two hidden layers, example: [[.4,.6],[.1,.2],[.5..5]] for layer 2
 ```
 
 # Backpropagation under the hood 
@@ -303,6 +353,7 @@ $\frac{\partial C}{\partial w_{jk}^{l}} = \frac{\partial C}{\partial z_{j}^{l}} 
 These are the equations expressed component wise. In actual practice, all this is done using matrices and linear algebra. The four equations in matrix notation are displayed below. 
 
 ![](/assets/img/nn/actualequations.png)
+
 Credit: [Michael Nielsen](http://neuralnetworksanddeeplearning.com/chap2.html)
 
 With the four equations in place, I hope it's clear why it's called "back"propagation. We first compute the activations forward, and then start at the error of the final layer, then use that to compute the errors of all the previous layers, one by one. With the errors in place, we find out the gradient of the cost with respect to all the weights and biases. 
@@ -353,9 +404,10 @@ def cost_derivative(self, final_activation, y): # Partial derivative of the cost
 
 It took me ~24 hours (over two weeks) to understand everything that is in this post. While the code is short and seems straightforward, there are many tricky aspects to it, with many crucial subtleties. I would highly recommend proving all 4 equations, then writing all the code yourself to internalize why and how neural networks work.  
 
-This is a heavily condensed version of the many things I've learnt. All the theory, code and intuition was available as free resources on the internet. The quality of information available online is baffling, I am deeply grateful for their work. In no particular order here are the awesome resources I used: 
+This is a heavily condensed version of the many things I've learnt. The theory and code in the post closely follows the book by [Michael Nielsen](http://neuralnetworksanddeeplearning.com/), an excellent resource with lucid explanations. 
 
-- [Michael Nielsen](http://neuralnetworksanddeeplearning.com/): best introductory text for both theory and code, with excellent questions written in a lucid manner
+Other awesome resources that helped deepen my understanding of neural networks are:  
+
 -  [3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi): the undisputed king of visuals and intuition 
 - [Andrej Karpathy](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ): you will actually enjoy coding and debugging  
 - [Sebastian Lague](https://youtu.be/hfMk-kjRv4c?si=G0vIZdvDvSeiPuzN): a very elaborate and detailed experiment, taught from first principles & explained marvelously 
