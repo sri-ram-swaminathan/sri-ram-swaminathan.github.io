@@ -9,7 +9,7 @@ toc_title: "Contents"
 
 > A neural network built from the ground up to solve digit recognition. I motivate theory and follow it up with code implementations. An in depth study of the 4 equations of backpropagation is provided at the end.  
 
-# Introduction and making predictions 
+# Making predictions 
 
 ![](/assets/img/nn/mnist_example.png)
  
@@ -17,17 +17,22 @@ Identifying these images is a trivial task for humans. But just imagine trying t
 
 And this is just for 9 digits. Imagine the complexity of rule-based system for self-driving cars! 
 
-The classical machine learning algorithms we have seen so far, from [Linear Regression](https://sriramswaminathan.com/technical/ch3/) till [Support Vector Machines](https://sriramswaminathan.com/technical/ch9/) have been interpretable. And while they are machine learning in the sense that they get better with data, superior performance is found by hand-crafting features and rules, turning knobs and dials based on human knowledge. 
+The classical machine learning algorithms we have seen so far, from [Linear Regression](https://sriramswaminathan.com/technical/ch3/) till [Support Vector Machines](https://sriramswaminathan.com/technical/ch9/) have been interpretable. And while they are machine learning in the sense that they get better with data, superior performance is found by hand-crafting features and rules, turning knobs and dials based on human knowledge. They are also limited in the types of problems they solve. 
 
-Neural networks are based on a completely different type of learning algorithm. One in which the tweaks to the parameters of the network are built into the learning algorithm. We completely do away with rules and interpretability, trading it on for an unbiased system that can learn most non-linear functions out there. The drawback being that it requires large data & compute, explaining why neural networks only gained traction from 2006 while the algorithms were developed all they way back in 1980. 
+Neural networks are based on a completely different type of learning algorithm. We completely do away with rules and interpretability, trading it in for an unbiased system that can learn [any](https://en.wikipedia.org/wiki/Universal_approximation_theorem) complicated function out there. The drawback being that it requires large data & compute, explaining why neural networks only gained traction from the 2000s while the algorithms were developed all they way back in 1980. 
 
-A neural network is just another function estimator (albeit a good one), it takes in some input and creates some output. The structure / method in which a neural network is shown below: 
+At the end of the day, we can think of a neural network as a function. One take takes in an input and spits out an output.  A basic neural network has an input layer, some hidden layers and a final output layer. Each of these layers is made up of neurons, each neuron stores a number and is connected to all other neurons in the next layer. The final prediction we make, is related to the neurons in the final layer. An example neural network is shown below:
 
-A bunch of linear functions can only approximate a linear function. This idea is explained beautifully in this [short video](https://youtu.be/0QczhVg5HaI?si=tlQd5r9SrEp_MfvP) by Emergent Garden. 
+![](/assets/img/nn/arch.jpg)
+Source: [Michael Nielsen](http://neuralnetworksanddeeplearning.com/chap1.html)
 
-However, most relationships between predictors and response tend to be non-linear. And so we introduce a non-linearity. 
+Each connection between neurons carries a weight, emphasizing how important that neuron is to the one in question. Each neuron also has a bias, a threshold that makes the prediction more robust. Let's image an overly simple neural network and see how we might use it to predict the rain: 
 
-The final output of the weighted sum of inputs, is therefore made to be 
+![](/assets/img/nn/example.jpg)
+
+Say we take as input $x$ which has the following information: [moisture, temperature, wind speed]. The first neuron, $y_{1} = w_{1} x + b_{1}$ may calculate how close the air is to condensation. Whereas, the second neuron, $y_{2} = w_{2} x + b_{2}$ may calculate how windy and hot it is. The final neuron, $z_{1} =  w_{3} y_{1} + w_{4} y_{2} + b_{3}$ can then combine both these features to calculate the total chance of rain! If this number is higher than some threshold, our network predicts rain. 
+
+A bunch of linear functions, can only approximate a linear function. $z_{1}= w_{3}(w_{1} x + b_{1}) + w_{4}( w_{2} x + b_{2}) + b_{3} = w x + b$. This idea is explained beautifully in this [short video](https://youtu.be/0QczhVg5HaI?si=tlQd5r9SrEp_MfvP) by Emergent Garden. However, most relationships between input and output tend to be non-linear. And so we introduce a non-linearity. The final output of each neuron, is therefore made to be $\sigma(w \cdot x + b)$, where $\sigma$ is the non-linear function. 
 
 ![](/assets/img/nn/activations.jpg)
 Some of the most popular activation functions. 
@@ -41,18 +46,33 @@ def sigmoid(z):
 def sigmoid_prime(z):
     return sigmoid(z) * (1 - sigmoid(z))
 ```
+Modern neural networks are built on a few powerful ideas:
 
-These two ideas, (i) multiple connected neurons and (ii) non-linear predictions, combine in such a way that a neural network can predict complex non-linear functions using very simple single non-linear blocks. 
+- Multiple neurons, each performing a simple computation.
+
+- Successive layers, where the output of one becomes the input of the next.
+
+- Non-linear activation functions, applied at each step.
+
+Individually, each neuron is quite simple — it takes in a few numbers, multiplies them by weights, adds a bias, and (optionally) applies a non-linear function like a sigmoid or ReLU. But when you connect these neurons together in layers, and stack the layers into a deep network, something remarkable happens.
+
+Through this structure, the network begins to build up complex behavior from simple parts. Early layers might detect basic patterns or relationships in the data. Later layers combine those patterns into more abstract concepts. The result is a system that can approximate highly non-linear functions — from recognizing handwriting to predicting the weather.
+
+This entire architecture, where information flows in one direction — from input to output — without looping back, is known as a feedforward neural network. It’s a foundational model in deep learning, and a beautiful example of how simple components, carefully combined, can produce intelligent behavior. 
 
 ```python 
 def feedforward(self,a):
   for w,b in zip(self.weights, self.biases):
     a = sigmoid(np.dot(w,a) +b) # Recursively computes activations for each layer and "feeds-forward" ; use a1 as input for layer 2, and so on
   return a 
-```
-Let's walk through a grossly oversimplified neural network that classifies a dog as cute or not, to understand the prediction mechanism. 
+``` 
 
+In our problem of digit classification, we accept 28x28 images as individual images in pixel form, for a total of 784 input neurons. The final layer then, has 10 neurons, one for each digit. The neuron with the highest activation, is our prediction for the digit. An example network may look like the following: 
 
+![](/assets/img/nn/mnist_example.png)
+Source: [Michael Nielsen](http://neuralnetworksanddeeplearning.com/chap1.html)
+
+🚨 This section had sloppy mathematics and hand-wavy notation. The point was purely illustrative, and the mathematics involved is clearly articulated later in the article. 
 
 # How will it learn? 
 
@@ -72,13 +92,14 @@ $$
 
 Where $\hat{y}$ is the neural network's prediction, and $y$ is the true label for that observation. So our output layer would have 10 neurons, and the neuron with highest activation would be our models' prediction.   
 
-In our case, this would measure how far away our estimates are, by calculating the difference in predicted activation responses to true activation responses.
+As discussed earlier, our model's prediction is the neuron with the highest activation. But, how confident is it of that number? It is 70-30 or more like 51-49? The loss function will tell us exactly that, with a higher value indicating lower confidence. It measures the difference between the actual neuron activations and the expected, ideal neuron activations. Here, the ideal activations would be 1 for the number and 0 everywhere else, 100% certainty.
 
-Insert image 
+![](/assets/img/nn/cost.png)
+Source: [3Blue1Brown](https://www.3blue1brown.com/lessons/gradient-descent)
 
 We turn now to one optimizing or lowering the cost, indeed the most popular method used in Deep Learning, gradient decent. The idea is best visualized in 2-dimensions. Imagine that all the values that the cost function can take forms a mountain. This mountain has peaks and valleys, and we would like to end up at the lowest valley, reduce the cost as much as possible. 
 
-Insert image 
+![](/assets/img/nn/gradient_landscape.png)
 
 Imagine you are at a random point on this mountain, and you want to know the direction of your next step, the best step you could take. A step that decreases your height the most. Mathematical wizardry makes this possible. Th gradient of a function, denoted $\nabla C$ tells us the direction to step in, and also the size of our step. I will explain this with an example:
 
@@ -154,7 +175,7 @@ def SGD(self, training_data, epochs, mini_batch_size, eta, test_data=None): # Tr
                 print(f"Epoch {j} complete")
 ```
 
-# Architecture and notation
+# Mathematical set up 
 
 Let's start by discussing notation, like good math boys.  
 
@@ -237,7 +258,6 @@ Here, Notice that the number of rows = number of neurons in layer $l-1$ while th
 
 With all the linear algebra in place, we define the basic structure of our neural network! We won't be defining any individual neurons, since we only care about the weights and biases. 
 
-
 ```python
 class Network():
     def __init__(self, sizes):
@@ -260,7 +280,7 @@ Backpropogation relies heavily on the idea of the [chain rule](https://en.wikipe
 Let's collect everything we have seen so far, and how each part is connected to the rest. This helped me understand the entire process deeper, and was especially useful during the proofs.  
 
 ![](/assets/img/nn/tree.png)
-The many moving parts and their relations. Credit: [3Blue1Brown](https://www.3blue1brown.com/lessons/backpropagation-calculus)
+The many moving parts and their relations. Source: [3Blue1Brown](https://www.3blue1brown.com/lessons/backpropagation-calculus)
 
 Without further ado, the four equations of backpropagation are: 
 
@@ -354,7 +374,7 @@ These are the equations expressed component wise. In actual practice, all this i
 
 ![](/assets/img/nn/actualequations.png)
 
-Credit: [Michael Nielsen](http://neuralnetworksanddeeplearning.com/chap2.html)
+Source: [Michael Nielsen](http://neuralnetworksanddeeplearning.com/chap2.html)
 
 With the four equations in place, I hope it's clear why it's called "back"propagation. We first compute the activations forward, and then start at the error of the final layer, then use that to compute the errors of all the previous layers, one by one. With the errors in place, we find out the gradient of the cost with respect to all the weights and biases. 
 
@@ -400,13 +420,22 @@ def cost_derivative(self, final_activation, y): # Partial derivative of the cost
         return (final_activation - y)
 ```
 
+And just like that we have all the pieces we need for our neural network to classify handwritten digits. Since we take in the 28x28 digit images pixel by pixel, we have 784 neurons in the input layer. The final layer has, as discussed before 10 neurons. The number and size of hidden layers is left to the designer, and I chose to follow Michael Nielsen and have one hidden layer, with 100 neurons. 
+
+```python 
+net = network.Network(sizes=[784, 100, 10])
+net.SGD(training_data, epochs=30, mini_batch_size=10, eta=0.001, test_data=test_data)
+```
+
+This modest network achieves ~92% accuracy! State of the art Neural Networks for image tasks, Convolutional Neural Networks have achieved as high as 99% accuracy on this problem.
+
 # Resources 
 
 It took me ~24 hours (over two weeks) to understand everything that is in this post. While the code is short and seems straightforward, there are many tricky aspects to it, with many crucial subtleties. I would highly recommend proving all 4 equations, then writing all the code yourself to internalize why and how neural networks work.  
 
 This is a heavily condensed version of the many things I've learnt. The theory and code in the post closely follows the book by [Michael Nielsen](http://neuralnetworksanddeeplearning.com/), an excellent resource with lucid explanations. 
 
-Other awesome resources that helped deepen my understanding of neural networks are:  
+Other awesome resources that helped deepen (pun intended) my understanding of neural networks are:  
 
 -  [3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi): the undisputed king of visuals and intuition 
 - [Andrej Karpathy](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ): you will actually enjoy coding and debugging  
