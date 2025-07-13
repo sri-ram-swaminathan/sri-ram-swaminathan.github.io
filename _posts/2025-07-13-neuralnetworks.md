@@ -69,7 +69,7 @@ def feedforward(self,a):
 
 In our problem of digit classification, we accept 28x28 images as individual images in pixel form, for a total of 784 input neurons. The final layer then, has 10 neurons, one for each digit. The neuron with the highest activation, is our prediction for the digit. An example network may look like the following: 
 
-![](/assets/img/nn/mnist_example.png)
+![](/assets/img/nn/mnist%20nn.jpg)
 Source: [Michael Nielsen](http://neuralnetworksanddeeplearning.com/chap1.html)
 
 🚨 This section had sloppy mathematics and hand-wavy notation. The point was purely illustrative, and the mathematics involved is clearly articulated later in the article. 
