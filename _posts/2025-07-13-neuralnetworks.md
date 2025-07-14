@@ -30,9 +30,45 @@ Each connection between neurons carries a weight, emphasizing how important that
 
 ![](/assets/img/nn/example.jpg)
 
-Say we take as input $x$ which has the following information: [moisture, temperature, wind speed]. The first neuron, $y_{1} = w_{1} x + b_{1}$ may calculate how close the air is to condensation. Whereas, the second neuron, $y_{2} = w_{2} x + b_{2}$ may calculate how windy and hot it is. The final neuron, $z_{1} =  w_{3} y_{1} + w_{4} y_{2} + b_{3}$ can then combine both these features to calculate the total chance of rain! If this number is higher than some threshold, our network predicts rain. 
+Suppose we take as input the vector $x = [x_1, x_2, x_3]$ representing the following features:  
+- $x_1$: moisture  
+- $x_2$: temperature  
+- $x_3$: wind speed  
 
-A bunch of linear functions, can only approximate a linear function. $z_{1}= w_{3}(w_{1} x + b_{1}) + w_{4}( w_{2} x + b_{2}) + b_{3} = w x + b$. This idea is explained beautifully in this [short video](https://youtu.be/0QczhVg5HaI?si=tlQd5r9SrEp_MfvP) by Emergent Garden. However, most relationships between input and output tend to be non-linear. And so we introduce a non-linearity. The final output of each neuron, is therefore made to be $\sigma(w \cdot x + b)$, where $\sigma$ is the non-linear function. 
+We pass this input into two neurons in the first layer:
+
+- The first neuron computes:
+  $$
+  y_1 = w_1 x + b_1 = w_{11}x_1 + w_{12}x_2 + w_{13}x_3 + b_1
+  $$
+  This might represent how close the air is to condensation.
+
+- The second neuron computes:
+  $$
+  y_2 = w_2 x + b_2 = w_{21}x_1 + w_{22}x_2 + w_{23}x_3 + b_2
+  $$
+  This could represent how windy and hot it is.
+
+We then feed these two outputs into a third neuron in the next layer, which computes:
+$$
+z_1 = w_3 y_1 + w_4 y_2 + b_3
+$$
+This final output might represent the **total chance of rain**. If $z_1$ exceeds a certain threshold, the network predicts rain.
+
+Now, since all operations are linear (no activation functions), the final output $z_1$ is still a linear function of the input $x$:
+
+$$
+z_1 = w_3(w_1 x + b_1) + w_4(w_2 x + b_2) + b_3 \\
+= (w_3 w_1 + w_4 w_2)x + (w_3 b_1 + w_4 b_2 + b_3) \\
+= w x + b
+$$
+
+So ultimately, the entire network reduces to a single linear transformation of the input:
+$$
+z_1 = w x + b
+$$
+
+A bunch of linear functions, can only approximate a linear function.This idea is explained beautifully in this [short video](https://youtu.be/0QczhVg5HaI?si=tlQd5r9SrEp_MfvP) by Emergent Garden. However, most relationships between input and output tend to be non-linear. And so we introduce a non-linearity. The final output of each neuron, is therefore made to be $\sigma(w \cdot x + b)$, where $\sigma$ is the non-linear function. 
 
 ![](/assets/img/nn/activations.jpg)
 Some of the most popular activation functions. 
