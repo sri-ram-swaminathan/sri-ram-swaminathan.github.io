@@ -37,15 +37,11 @@ A website that delivers randomized math tests for each student and uses a custom
 
 ### Programming Languages 
 
-- Python, SQL, R, LaTeX
+- Python, SQL, R
 
 ### Frameworks and libraries 
 
-- NumPy, matplotlib, scikitlearn  
-
-### Cloud Technologies
-
-- AWS
+- NumPy, matplotlib, scikitlearn, PyTorch, OpenCV 
 
 ### Machine Learning 
 - Supervised, Deep Learning, Natural Language Processing, Computer Vision
