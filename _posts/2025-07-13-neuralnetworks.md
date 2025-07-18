@@ -151,7 +151,7 @@ $$
 
 Here each row represents one particular direction or dimension. The large positive magnitude indicates we need to take a big positive step in that direction. While the small negative magnitude indicated we need to take a small negative step in the other. 
 
-A little caveat, the gradient tells us the direction of steepest ascent. So we just walk teh opposite way. Ah, we now have a simple update rule
+A little caveat, the gradient tells us the direction of steepest ascent. So we just walk the opposite way. Ah, we now have a simple update rule
 
 $$
 x_{n+1} = x_{n}
@@ -162,7 +162,7 @@ x_{n+1} = x_{n}
 y_{n+1} = y_{n}
  - \eta \nabla f_{y} $$
 
-he factor eta ($\eta$) is called the learning rate, something that controls how quickly we converge (if we do) to a local minimum or valley. 
+The factor eta ($\eta$) is called the learning rate, something that controls how quickly we converge (if we do) to a local minimum or valley. 
 
 A neural network is defined by it's weights and biases, the dimensions of the cost function. Hence, in our case, the update rule looks like: 
 
