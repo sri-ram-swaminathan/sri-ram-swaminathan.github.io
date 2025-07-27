@@ -50,6 +50,8 @@ The time to fix the roof is when the sun is shining. - John F Kennedy
 
 Want it all I won't leave a breadcrumb. - Redrum by 21 Savage
 
+![Short term suffering for long term success](/assets/img/motivation/longterm.jpg)
+
 I want the credit if we're loosing or winning on my mama that's the realest shit. - All the stars by Kendrick Lamar 
 
 सपने होते सच, तब मजा आता सोने में - 3:59 AM by Divine 
