@@ -51,6 +51,7 @@ The time to fix the roof is when the sun is shining. - John F Kennedy
 Want it all I won't leave a breadcrumb. - Redrum by 21 Savage
 
 ![Short term suffering for long term success](/assets/img/motivation/longterm.jpg)
+Short term suffering for long term success. 
 
 I want the credit if we're loosing or winning on my mama that's the realest shit. - All the stars by Kendrick Lamar 
 
@@ -83,6 +84,7 @@ I will build that castle, but today I lay a brick.
 
 If I don't believe in myself, nobody else will. If I believe in myself, I don't need anybody else to. All it takes is you. 
 
+There are only two positions in life, first and not first. 
 
 
 
