@@ -8,7 +8,7 @@ author_profile: true
 ## Education
 
 - MSc Data Science for Decision Making, Maastricht University \| 2025-2027
-    - GPA: 8.5/10
+    - GPA: 8.5/10 (*Cum Laude*)
     - Thesis:
     - Key courses: Mathematical Optimisation, Computational Statistics, Algorithms for Big Data, Advanced Natural Language Processing, Computer Vision
 
