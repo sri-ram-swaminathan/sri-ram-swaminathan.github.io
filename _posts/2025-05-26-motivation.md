@@ -57,7 +57,9 @@ I want the credit if we're loosing or winning on my mama that's the realest shit
 
 सपने होते सच, तब मजा आता सोने में - 3:59 AM by Divine 
 
-You don't get into something to test the waters, you get into something to make waves - 
+You don't get into something to test the waters, you get into something to make waves - Internet 
+
+कामयाबी की भूख है ये, महनत सबूत है ये, रहमत की छूट नहीं है - Rain by Divine
 
 # Wholesome
 
@@ -86,7 +88,7 @@ If I don't believe in myself, nobody else will. If I believe in myself, I don't 
 
 There are only two positions in life, first and not first. 
 
-
+Remember the first time you experienced something? Childlike wonder at something that's now commonplace. Your new t-shirt, a book bought on sale, new friends, a cycle path, ... Don't lose that magic. Don't forget how amazing it felt to experience your routine, everyday life. Smile and be grateful.  
 
    
 

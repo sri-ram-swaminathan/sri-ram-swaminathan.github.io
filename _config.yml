@@ -128,6 +128,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sri-ram-swaminathan"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://x.com/sriramreads"
 
 # Site Footer
 footer:
