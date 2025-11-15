@@ -41,8 +41,13 @@ A website that delivers randomized math tests for each student and uses a custom
 
 ### Frameworks and libraries 
 
-- NumPy, matplotlib, scikitlearn, PyTorch, OpenCV 
+- NumPy, matplotlib, scikitlearn, PyTorch, OpenCV, LangGraph, HuggingFace
 
 ### Machine Learning 
 - Supervised, Deep Learning, Natural Language Processing, Computer Vision
 
+## Technologies and Certificates 
+
+- [HuggingFace AI Agents](https://drive.google.com/file/d/1l3Kx4QyITnkDhrMODLSowZbnNXT_2-zQ/view?usp=sharing)
+- [Probability by MIT (EdX)](https://drive.google.com/file/d/11lW45EP0VsiIdXk10WX9BLqnXG61n69N/view?usp=drive_link)
+- [IELTS English C2](https://drive.google.com/file/d/1119QHObdHXxaA2c-DY_USBLsgzlJgtdf/view?usp=sharing)

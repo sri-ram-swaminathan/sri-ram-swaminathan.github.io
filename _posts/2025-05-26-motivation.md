@@ -61,6 +61,8 @@ You don't get into something to test the waters, you get into something to make 
 
 कामयाबी की भूख है ये, महनत सबूत है ये, रहमत की छूट नहीं है - Rain by Divine
 
+It is not the strongest of the species that survives, nor the most intelligent. It is the one most adaptable to change - Charles Darwin
+
 # Wholesome
 
 If you can't say something nice, don't say nothing at all. - Thumper 
@@ -79,6 +81,8 @@ It's only awkward if you make it. - m&m
 - think about what you're not thinking about; a beach home means ocean breeze and mosquitoes a plenty, a view of the ocean and meeting plumbers on weekends, factor in the day-to-day 
 - beware of comparison shopping; don't overstate the differences and understate the similarities
 - pay close attention to the happiness of others; are people who bought said thing indeed happier for it?
+
+What I cannot build, I do not understand - Richard P Feynman 
 
 # By yours truly 
 
