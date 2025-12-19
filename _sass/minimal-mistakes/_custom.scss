@@ -1,0 +1,26 @@
+/* Define theme variables */
+:root {
+  --primary-bg: #ffffff;
+  --main-text: #1c1c1e;
+  --link-color: #007aff;
+  --masthead-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --primary-bg: #121212;
+  --main-text: #e1e1e1;
+  --link-color: #64b5f6;
+  --masthead-bg: #1c1c1e;
+}
+
+/* Apply variables to the theme */
+body {
+  background-color: var(--primary-bg) !important;
+  color: var(--main-text) !important;
+}
+
+.masthead {
+  background-color: var(--masthead-bg) !important;
+}
+
+a { color: var(--link-color); }

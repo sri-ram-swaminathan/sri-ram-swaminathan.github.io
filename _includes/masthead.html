@@ -22,12 +22,19 @@
             </li>
           {%- endfor -%}
         </ul>
+
+        <button id="theme-toggle" class="search__toggle" type="button" style="margin-right: 5px;">
+          <span class="visually-hidden">Toggle Dark Mode</span>
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+
         {% if site.search == true %}
         <button class="search__toggle" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
           <i class="fas fa-search"></i>
         </button>
         {% endif %}
+        
         <button class="greedy-nav__toggle hidden" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
           <div class="navicon"></div>
@@ -37,3 +44,35 @@
     </div>
   </div>
 </div>
+
+<script>
+  /* --- Dark Mode Toggle Logic --- */
+  const btn = document.getElementById('theme-toggle');
+  const icon = document.getElementById('theme-icon');
+  
+  // Function to update the icon based on the active theme
+  const updateIcon = (theme) => {
+    if (theme === 'dark') {
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    } else {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+    }
+  };
+
+  // Check current theme on load to set correct initial icon
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    updateIcon(currentTheme);
+  });
+
+  btn.addEventListener('click', () => {
+    let currentTheme = document.documentElement.getAttribute('data-theme');
+    let targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', targetTheme);
+    localStorage.setItem('theme', targetTheme);
+    updateIcon(targetTheme);
+  });
+</script>

@@ -51,3 +51,10 @@ A website that delivers randomized math tests for each student and uses a custom
 - [HuggingFace AI Agents](https://drive.google.com/file/d/1l3Kx4QyITnkDhrMODLSowZbnNXT_2-zQ/view?usp=sharing)
 - [Probability by MIT (EdX)](https://drive.google.com/file/d/11lW45EP0VsiIdXk10WX9BLqnXG61n69N/view?usp=drive_link)
 - [IELTS English C2](https://drive.google.com/file/d/1119QHObdHXxaA2c-DY_USBLsgzlJgtdf/view?usp=sharing)
+
+## Technical bookshelf 
+
+- Introduction to Probability by Dimitri P. Bertsekas and John N. Tsitsiklis
+- An Introduction to Statistical Learning with Applications in Python by Gareth James, Daniela Witten, Trevor Hastie Robert Tibshirani and Jonathan Taylor 
+- Designing Machine Learning Systems by Chip Huyen 
+- AI Engineering by Chip Huyen 
