@@ -44,35 +44,3 @@
     </div>
   </div>
 </div>
-
-<script>
-  /* --- Dark Mode Toggle Logic --- */
-  const btn = document.getElementById('theme-toggle');
-  const icon = document.getElementById('theme-icon');
-  
-  // Function to update the icon based on the active theme
-  const updateIcon = (theme) => {
-    if (theme === 'dark') {
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-    } else {
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon');
-    }
-  };
-
-  // Check current theme on load to set correct initial icon
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    updateIcon(currentTheme);
-  });
-
-  btn.addEventListener('click', () => {
-    let currentTheme = document.documentElement.getAttribute('data-theme');
-    let targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    document.documentElement.setAttribute('data-theme', targetTheme);
-    localStorage.setItem('theme', targetTheme);
-    updateIcon(targetTheme);
-  });
-</script>
