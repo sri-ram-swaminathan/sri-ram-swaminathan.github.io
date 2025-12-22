@@ -17,7 +17,8 @@ author_profile: true
 
 
 ## Experience 
-🏗️
+
+- Statistics Netherlands (CBS) \| February 2026 - August 2026 
 
 
 ## Projects 
@@ -37,24 +38,25 @@ A website that delivers randomized math tests for each student and uses a custom
 
 ### Programming Languages 
 
-- Python, SQL, R
+- Python, SQL, R, MATLAB
 
 ### Frameworks and libraries 
 
 - NumPy, matplotlib, scikitlearn, PyTorch, OpenCV, LangGraph, HuggingFace
 
 ### Machine Learning 
-- Supervised, Deep Learning, Natural Language Processing, Computer Vision
+- Supervised, Unsupervised, Deep Learning, Natural Language Processing, Computer Vision
 
 ## Technologies and Certificates 
 
 - [HuggingFace AI Agents](https://drive.google.com/file/d/1l3Kx4QyITnkDhrMODLSowZbnNXT_2-zQ/view?usp=sharing)
 - [Probability by MIT (EdX)](https://drive.google.com/file/d/11lW45EP0VsiIdXk10WX9BLqnXG61n69N/view?usp=drive_link)
 - [IELTS English C2](https://drive.google.com/file/d/1119QHObdHXxaA2c-DY_USBLsgzlJgtdf/view?usp=sharing)
+- [CS50 Python](https://drive.google.com/file/d/11Opux7o8vAlGQG7iJpUtpQrqBX8A5K8H/view?usp=drive_link)
 
 ## Technical bookshelf 
 
-- Introduction to Probability by Dimitri P. Bertsekas and John N. Tsitsiklis
-- An Introduction to Statistical Learning with Applications in Python by Gareth James, Daniela Witten, Trevor Hastie Robert Tibshirani and Jonathan Taylor 
-- Designing Machine Learning Systems by Chip Huyen 
-- AI Engineering by Chip Huyen 
+- [Introduction to Probability](https://www.vfu.bg/en/e-Learning/Math--Bertsekas_Tsitsiklis_Introduction_to_probability.pdf) by Dimitri P. Bertsekas and John N. Tsitsiklis
+- [An Introduction to Statistical Learning with Applications in Python](https://www.statlearning.com/) by Gareth James, Daniela Witten, Trevor Hastie Robert Tibshirani and Jonathan Taylor 
+- [Designing Machine Learning Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) by Chip Huyen 
+- [AI Engineering](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) by Chip Huyen 
