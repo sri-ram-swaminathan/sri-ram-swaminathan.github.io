@@ -8,7 +8,7 @@ author_profile: true
 ## Education
 
 - MSc Data Science for Decision Making, Maastricht University \| 2025-2027
-    - GPA: 8.5/10 (*Cum Laude*)
+    - GPA: 8.66/10 (*Cum Laude*)
     - Thesis:
     - Key courses: Mathematical Optimisation, Computational Statistics, Algorithms for Big Data, Advanced Natural Language Processing, Computer Vision
 
@@ -47,7 +47,7 @@ A website that delivers randomized math tests for each student and uses a custom
 ### Machine Learning 
 - Supervised, Unsupervised, Deep Learning, Natural Language Processing, Computer Vision
 
-## Technologies and Certificates 
+## Certificates 
 
 - [HuggingFace AI Agents](https://drive.google.com/file/d/1l3Kx4QyITnkDhrMODLSowZbnNXT_2-zQ/view?usp=sharing)
 - [Probability by MIT (EdX)](https://drive.google.com/file/d/11lW45EP0VsiIdXk10WX9BLqnXG61n69N/view?usp=drive_link)
