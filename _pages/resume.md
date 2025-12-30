@@ -49,6 +49,7 @@ A website that delivers randomized math tests for each student and uses a custom
 
 ## Certificates 
 
+- [Machine Learning Operations by Duke University](https://drive.google.com/file/d/1PdF7-ubRpYJCzGjBpq5sxLjDvRfWoBEA/view?usp=sharing)
 - [HuggingFace AI Agents](https://drive.google.com/file/d/1l3Kx4QyITnkDhrMODLSowZbnNXT_2-zQ/view?usp=sharing)
 - [Probability by MIT (EdX)](https://drive.google.com/file/d/11lW45EP0VsiIdXk10WX9BLqnXG61n69N/view?usp=drive_link)
 - [IELTS English C2](https://drive.google.com/file/d/1119QHObdHXxaA2c-DY_USBLsgzlJgtdf/view?usp=sharing)
