@@ -7,7 +7,7 @@ toc_sticky: true
 toc_title: "Contents"
 ---
 
-> This is detailed explanation of my first research project as part of my Master's @ Maastricht University. This was a group project, consisting of 6 members, completed in one semester.  
+> Automating math test creation, evaluation and feedback for STEM Master's students  
 
 # Problem statement 
 
