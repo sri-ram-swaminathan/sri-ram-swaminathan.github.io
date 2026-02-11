@@ -8,7 +8,7 @@ author_profile: true
 ## Education
 
 - MSc Data Science for Decision Making, Maastricht University \| 2025-2027
-    - GPA: 8.66/10 (*Cum Laude*)
+    - GPA: 8.5/10 (*Cum Laude*)
     - Thesis:
     - Key courses: Mathematical Optimisation, Computational Statistics, Algorithms for Big Data, Advanced Natural Language Processing, Computer Vision
 
@@ -19,9 +19,23 @@ author_profile: true
 ## Experience 
 
 - Statistics Netherlands (CBS) \| February 2026 - August 2026 
+    - Working on Self-Supervised Learning techniques for data augmentation on RGB satellite images 
 
+- Prosus \| AI University Games Hackathon \| [Repository](https://github.com/DataShinobiX/cadence_scheduler)
+    - An AI Agent personal assistant that schedules tasks and manages conflicts from natural language voice input and email
+    - Built Google Calendar integration tool and Gmail notification scheduler agent
 
+- Maastricht University \| Supernova buildathon \| [Demo](https://hackathon-supernova.vercel.app/)
+    - A note taking platform where students get real-time feedback based on course materials and teachers understand student comprehension 
+    - Built RAG pipelines for checking notes based on provided context in DataStax 
 ## Projects 
+
+### Charismatic leadership tactics assessment 
+
+[Detailed article](https://sriramswaminathan.com/technical/charisma)
+
+- Created explainable features using various Deep Learning techniques on multi-modal data, and made explainable predictions using Decision Trees on 77 data points
+- Responsible for data pre-processing, label generation, gaze tracking, speech processing and correlation analysis
 
 ### Automatic recommendations of preparatory math courses 
 
@@ -42,10 +56,10 @@ A website that delivers randomized math tests for each student and uses a custom
 
 ### Frameworks and libraries 
 
-- NumPy, matplotlib, scikitlearn, PyTorch, OpenCV, LangGraph, HuggingFace
+- NumPy, matplotlib, scikitlearn, PyTorch, OpenCV, LangGraph, HuggingFace, geopandas
 
 ### Machine Learning 
-- Supervised, Unsupervised, Deep Learning, Natural Language Processing, Computer Vision
+- Supervised, Unsupervised, Self-supervised, Deep Learning, Natural Language Processing, Computer Vision
 
 ## Certificates 
 
