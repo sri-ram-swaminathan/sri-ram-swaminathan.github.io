@@ -27,7 +27,8 @@ author_profile: true
 
 - Maastricht University \| Supernova buildathon \| [Demo](https://hackathon-supernova.vercel.app/)
     - A note taking platform where students get real-time feedback based on course materials and teachers understand student comprehension 
-    - Built RAG pipelines for checking notes based on provided context in DataStax 
+    - Built RAG pipelines for checking notes based on provided context in DataStax
+     
 ## Projects 
 
 ### Charismatic leadership tactics assessment 
