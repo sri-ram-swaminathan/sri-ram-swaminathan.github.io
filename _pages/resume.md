@@ -19,15 +19,22 @@ author_profile: true
 ## Experience 
 
 - Statistics Netherlands (CBS) \| February 2026 - August 2026 
-    - Working on Self-Supervised Learning techniques for data augmentation on RGB satellite images 
+    - Improved prediction accuracy of bio-diversity assessment from RGB aerial images in the Netherlands 
+    - Managed the full data science lifecycle; data collection, preprocessing, feature engineering, and experiment evaluation
+    - Fine-tuning foundational models and building custom datasets 
+    - Creating new data augmentation techniques for earth observability 
 
-- Prosus \| AI University Games Hackathon \| [Repository](https://github.com/DataShinobiX/cadence_scheduler)
-    - An AI Agent personal assistant that schedules tasks and manages conflicts from natural language voice input and email
-    - Built Google Calendar integration tool and Gmail notification scheduler agent
+## Hackathons 
+
+- Veed.io \| GenAI and Video Hackathon \| [Demo]() 
 
 - Maastricht University \| Supernova buildathon \| [Demo](https://hackathon-supernova.vercel.app/)
     - A note taking platform where students get real-time feedback based on course materials and teachers understand student comprehension 
     - Built RAG pipelines for checking notes based on provided context in DataStax
+
+- Prosus \| AI University Games Hackathon \| [Demo](https://www.youtube.com/watch?v=nbHr0_cbxaM)
+    - An AI Agent personal assistant that schedules tasks and manages conflicts from natural language voice input and email
+    - Built Google Calendar integration tool and Gmail notification scheduler agent
      
 ## Projects 
 
@@ -76,3 +83,4 @@ A website that delivers randomized math tests for each student and uses a custom
 - [An Introduction to Statistical Learning with Applications in Python](https://www.statlearning.com/) by Gareth James, Daniela Witten, Trevor Hastie Robert Tibshirani and Jonathan Taylor 
 - [Designing Machine Learning Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) by Chip Huyen 
 - [AI Engineering](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) by Chip Huyen 
+- [Designing Data Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/) by Martin Kleppmann 
