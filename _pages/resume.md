@@ -26,7 +26,12 @@ author_profile: true
 
 ## Hackathons 
 
-- Veed.io \| GenAI and Video Hackathon \| [Demo]() 
+
+- Bunq \| Multi-modal AI Hackathon \| 
+
+- Veed.io \| GenAI and Video Hackathon \| $ 2^{nd} $ place \| [Demo](https://youtu.be/1Ih10nS_XB8?si=P2C3nOMgejZRffrf) 
+    - Motif.ai ; create 8 second looping videos for Spotify canvas after analyzing artist's music 
+    - Responsible for [text-to-image, image-to-video] models and video editing feature 
 
 - Maastricht University \| Supernova buildathon \| [Demo](https://hackathon-supernova.vercel.app/)
     - A note taking platform where students get real-time feedback based on course materials and teachers understand student comprehension 
