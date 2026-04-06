@@ -69,10 +69,13 @@ A website that delivers randomized math tests for each student and uses a custom
 
 ### Frameworks and libraries 
 
-- NumPy, matplotlib, scikitlearn, PyTorch, OpenCV, LangGraph, HuggingFace, geopandas
+- NumPy, pandas, GeoPandas, matplotlib, scikit-learn, PyTorch, Torchgeo, Terratorch, LangGraph, LlamaIndex
 
-### Machine Learning 
-- Supervised, Unsupervised, Self-supervised, Deep Learning, Natural Language Processing, Computer Vision
+### Tools and DevOps
+- Git, Github Actions, Docker 
+
+### ML Platforms and Frameworks 
+- Huggingface (Datasets, Transformers), MLFlow 
 
 ## Certificates 
 
