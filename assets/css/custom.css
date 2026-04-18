@@ -142,8 +142,10 @@
      (hides surrounding whitespace and the corner watermark). */
   left: -155px;
   top:  -212px;
-  width: 480px;
-  height: 480px;
+  width: 480px !important;         /* override theme's max-width:100% on img */
+  height: 480px !important;        /* override theme's height:auto on img */
+  max-width: none !important;
+  max-height: none !important;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   user-select: none;
