@@ -43,45 +43,74 @@
   }
 
   // --- Pixel cat ----------------------------------------------------------
-  // Two SVG frames stacked; CSS alternates opacity to create a walk cycle.
-  // Cat faces right (head on right, tail on left). Flipped via scaleX(-1) at wall.
+  // Mistral-style reclining cat: cream body, black outline, normal triangular ears.
+  // Two SVG frames stacked; opacity alternates to wag the tail tip.
   var SVG_NS = 'http://www.w3.org/2000/svg';
 
-  function rect(parent, x, y, w, h) {
-    var r = document.createElementNS(SVG_NS, 'rect');
-    r.setAttribute('x', x);
-    r.setAttribute('y', y);
-    r.setAttribute('width', w);
-    r.setAttribute('height', h);
-    r.setAttribute('fill', 'currentColor');
-    parent.appendChild(r);
-  }
+  var PALETTE = {
+    'K': 'currentColor',   // outline — theme-aware via wrapper color
+    'C': '#f5ead5',        // cream body (constant, Mistral-style)
+    'E': 'currentColor'    // eye (same as outline)
+  };
 
-  function drawBody(g) {
-    // Tail (left side, curls up)
-    rect(g, 0, 2, 2, 4);
-    rect(g, 1, 5, 2, 1);
-    // Body
-    rect(g, 2, 4, 13, 4);
-    // Head
-    rect(g, 13, 2, 7, 3);
-    // Ears
-    rect(g, 13, 0, 2, 2);
-    rect(g, 17, 0, 2, 2);
-  }
+  // 24 cols x 14 rows. Cat faces right (head right, tail curls up on left).
+  var FRAME_0 = [
+    '........................',
+    '...............K...K....',
+    '..KK...........KCK.KCK..',
+    '.KCK..........KCCCCCCCK.',
+    '.KCK..........KCCCCCCCK.',
+    '.KCK..........KCECCCECK.',
+    '.KCCKKKKKKKKKKKCCCCCCCK.',
+    '.KCCCCCCCCCCCCCCCCCCCK..',
+    '.KCCCCCCCCCCCCCCCCCCCK..',
+    '.KCCCCCCCCCCCCCCCCCCCK..',
+    '.KCCKKCCKKCCCCCCCKKCCK..',
+    '.KCK.KCK.KCCCCCCK.KCCK..',
+    '.KKK.KKK.KKKKKKKK.KKKK..',
+    '........................'
+  ];
+  // Frame 1: tail tip lifts and curls — a small twitch.
+  var FRAME_1 = [
+    '........................',
+    '..K............K...K....',
+    '..KKK..........KCK.KCK..',
+    '.KCCK.........KCCCCCCCK.',
+    '.KCK..........KCCCCCCCK.',
+    '.KCK..........KCECCCECK.',
+    '.KCCKKKKKKKKKKKCCCCCCCK.',
+    '.KCCCCCCCCCCCCCCCCCCCK..',
+    '.KCCCCCCCCCCCCCCCCCCCK..',
+    '.KCCCCCCCCCCCCCCCCCCCK..',
+    '.KCCKKCCKKCCCCCCCKKCCK..',
+    '.KCK.KCK.KCCCCCCK.KCCK..',
+    '.KKK.KKK.KKKKKKKK.KKKK..',
+    '........................'
+  ];
 
-  function makeFrame(legPositions) {
+  function makeCatFrame(pixelMap, cls) {
+    var W = pixelMap[0].length;
+    var H = pixelMap.length;
     var svg = document.createElementNS(SVG_NS, 'svg');
-    svg.setAttribute('viewBox', '0 0 20 11');
+    svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
     svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
     svg.setAttribute('aria-hidden', 'true');
-    var g = document.createElementNS(SVG_NS, 'g');
-    drawBody(g);
-    // Legs
-    legPositions.forEach(function (leg) {
-      rect(g, leg.x, 8, 2, leg.h);
-    });
-    svg.appendChild(g);
+    svg.classList.add('pixel-cat-frame', cls);
+
+    for (var y = 0; y < H; y++) {
+      var row = pixelMap[y];
+      for (var x = 0; x < row.length; x++) {
+        var color = PALETTE[row[x]];
+        if (!color) continue;
+        var r = document.createElementNS(SVG_NS, 'rect');
+        r.setAttribute('x', x);
+        r.setAttribute('y', y);
+        r.setAttribute('width', 1);
+        r.setAttribute('height', 1);
+        r.setAttribute('fill', color);
+        svg.appendChild(r);
+      }
+    }
     return svg;
   }
 
@@ -89,27 +118,8 @@
     var wrapper = document.createElement('div');
     wrapper.className = 'pixel-cat-wrapper';
     wrapper.setAttribute('aria-hidden', 'true');
-
-    // Frame 0: outer legs down, inner legs up
-    var frame0 = makeFrame([
-      { x: 2,  h: 3 },
-      { x: 6,  h: 1 },
-      { x: 11, h: 1 },
-      { x: 14, h: 3 }
-    ]);
-    frame0.classList.add('pixel-cat-frame', 'pixel-cat-frame-0');
-
-    // Frame 1: outer legs up, inner legs down
-    var frame1 = makeFrame([
-      { x: 2,  h: 1 },
-      { x: 6,  h: 3 },
-      { x: 11, h: 3 },
-      { x: 14, h: 1 }
-    ]);
-    frame1.classList.add('pixel-cat-frame', 'pixel-cat-frame-1');
-
-    wrapper.appendChild(frame0);
-    wrapper.appendChild(frame1);
+    wrapper.appendChild(makeCatFrame(FRAME_0, 'pixel-cat-frame-0'));
+    wrapper.appendChild(makeCatFrame(FRAME_1, 'pixel-cat-frame-1'));
     document.body.appendChild(wrapper);
   }
 
