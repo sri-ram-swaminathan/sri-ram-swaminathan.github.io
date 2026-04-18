@@ -144,44 +144,34 @@ button, input, textarea, select,
   border-color: rgba(255, 255, 255, 0.12);
 }
 
-/* --- Pixel cat (reclining, Mistral-style) --- */
+/* --- Pixel cat (user-provided GIF, cropped to cat region) --- */
 .pixel-cat-wrapper {
   position: fixed;
   right: 16px;
   bottom: 10px;
-  /* Sprite is 24x14 pixels; displayed at 4x scale for crispness. */
-  width: 96px;
-  height: 56px;
-  z-index: 999;
+  /* Window that reveals only the cat from the 480x480 source. */
+  width: 140px;
+  height: 78px;
+  overflow: hidden;
   pointer-events: none;
-  color: #1a1d23; /* outline color (currentColor in the SVG) */
+  z-index: 999;
 }
-[data-theme="dark"] .pixel-cat-wrapper { color: #e6e6e6; }
 
-.pixel-cat-frame {
+.pixel-cat-img {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  /* Shift the natural-size GIF so the cat aligns with the window
+     (hides surrounding whitespace and the corner watermark). */
+  left: -155px;
+  top:  -212px;
+  width: 480px;
+  height: 480px;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
-  shape-rendering: crispEdges;
+  user-select: none;
+  pointer-events: none;
 }
 
-/* Tail-twitch: frames cross-fade on a slow cycle. */
-.pixel-cat-frame-0 { animation: cat-twitch-0 2.4s steps(1) infinite; }
-.pixel-cat-frame-1 { animation: cat-twitch-1 2.4s steps(1) infinite; }
-
-@keyframes cat-twitch-0 {
-  0%, 82%   { opacity: 1; }
-  83%, 100% { opacity: 0; }
-}
-@keyframes cat-twitch-1 {
-  0%, 82%   { opacity: 0; }
-  83%, 100% { opacity: 1; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .pixel-cat-frame { animation: none; }
-  .pixel-cat-frame-1 { opacity: 0; }
-}
+/* Dark mode: source GIF has a white background. Invert + hue-rotate flips
+   luminance while keeping hues, so white becomes ~black and the gray cat
+   stays roughly gray. */
+[data-theme="dark"] .pixel-cat-img { filter: invert(1) hue-rotate(180deg); }

@@ -43,83 +43,20 @@
   }
 
   // --- Pixel cat ----------------------------------------------------------
-  // Mistral-style reclining cat: cream body, black outline, normal triangular ears.
-  // Two SVG frames stacked; opacity alternates to wag the tail tip.
-  var SVG_NS = 'http://www.w3.org/2000/svg';
-
-  var PALETTE = {
-    'K': 'currentColor',   // outline — theme-aware via wrapper color
-    'C': '#f5ead5',        // cream body (constant, Mistral-style)
-    'E': 'currentColor'    // eye (same as outline)
-  };
-
-  // 24 cols x 14 rows. Cat faces right (head right, tail curls up on left).
-  var FRAME_0 = [
-    '........................',
-    '...............K...K....',
-    '..KK...........KCK.KCK..',
-    '.KCK..........KCCCCCCCK.',
-    '.KCK..........KCCCCCCCK.',
-    '.KCK..........KCECCCECK.',
-    '.KCCKKKKKKKKKKKCCCCCCCK.',
-    '.KCCCCCCCCCCCCCCCCCCCK..',
-    '.KCCCCCCCCCCCCCCCCCCCK..',
-    '.KCCCCCCCCCCCCCCCCCCCK..',
-    '.KCCKKCCKKCCCCCCCKKCCK..',
-    '.KCK.KCK.KCCCCCCK.KCCK..',
-    '.KKK.KKK.KKKKKKKK.KKKK..',
-    '........................'
-  ];
-  // Frame 1: tail tip lifts and curls — a small twitch.
-  var FRAME_1 = [
-    '........................',
-    '..K............K...K....',
-    '..KKK..........KCK.KCK..',
-    '.KCCK.........KCCCCCCCK.',
-    '.KCK..........KCCCCCCCK.',
-    '.KCK..........KCECCCECK.',
-    '.KCCKKKKKKKKKKKCCCCCCCK.',
-    '.KCCCCCCCCCCCCCCCCCCCK..',
-    '.KCCCCCCCCCCCCCCCCCCCK..',
-    '.KCCCCCCCCCCCCCCCCCCCK..',
-    '.KCCKKCCKKCCCCCCCKKCCK..',
-    '.KCK.KCK.KCCCCCCK.KCCK..',
-    '.KKK.KKK.KKKKKKKK.KKKK..',
-    '........................'
-  ];
-
-  function makeCatFrame(pixelMap, cls) {
-    var W = pixelMap[0].length;
-    var H = pixelMap.length;
-    var svg = document.createElementNS(SVG_NS, 'svg');
-    svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
-    svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
-    svg.setAttribute('aria-hidden', 'true');
-    svg.classList.add('pixel-cat-frame', cls);
-
-    for (var y = 0; y < H; y++) {
-      var row = pixelMap[y];
-      for (var x = 0; x < row.length; x++) {
-        var color = PALETTE[row[x]];
-        if (!color) continue;
-        var r = document.createElementNS(SVG_NS, 'rect');
-        r.setAttribute('x', x);
-        r.setAttribute('y', y);
-        r.setAttribute('width', 1);
-        r.setAttribute('height', 1);
-        r.setAttribute('fill', color);
-        svg.appendChild(r);
-      }
-    }
-    return svg;
-  }
-
+  // Uses the user-provided GIF cropped to the cat region via overflow:hidden
+  // on the wrapper. GIF provides its own animation.
   function buildCat() {
     var wrapper = document.createElement('div');
     wrapper.className = 'pixel-cat-wrapper';
     wrapper.setAttribute('aria-hidden', 'true');
-    wrapper.appendChild(makeCatFrame(FRAME_0, 'pixel-cat-frame-0'));
-    wrapper.appendChild(makeCatFrame(FRAME_1, 'pixel-cat-frame-1'));
+
+    var img = document.createElement('img');
+    img.src = '/assets/img/pixel%20cat.gif';
+    img.alt = '';
+    img.className = 'pixel-cat-img';
+    img.draggable = false;
+    wrapper.appendChild(img);
+
     document.body.appendChild(wrapper);
   }
 
