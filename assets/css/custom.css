@@ -1,27 +1,6 @@
 /* ==========================================================================
-   Custom additions: iPhone (SF Pro) font, dark mode, pixel cat
+   Custom additions: dark mode, pixel cat
    ========================================================================== */
-
-/* --- iPhone font stack (SF Pro on Apple devices, Inter fallback elsewhere) --- */
-:root {
-  --sf-stack: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
-    "Inter", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-html, body,
-h1, h2, h3, h4, h5, h6,
-p, a, span, li, td, th, label,
-button, input, textarea, select,
-.page__title, .page__content, .page__meta,
-.archive__item-title, .archive__item-excerpt,
-.site-title, .site-subtitle, .greedy-nav a,
-.masthead, .page__footer {
-  font-family: var(--sf-stack) !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: "ss01", "cv11";
-  letter-spacing: -0.01em;
-}
 
 /* --- Theme toggle button (lives inside the masthead nav) --- */
 .greedy-nav .theme-toggle {
