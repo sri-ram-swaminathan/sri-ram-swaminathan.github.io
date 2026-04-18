@@ -3,6 +3,25 @@
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <link rel="shortcut icon" type="image/png" href="/assets/img/bear.ico">
 
+<!-- Inter as fallback for non-Apple systems (SF Pro is system-only on Apple) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+<!-- Custom theme (dark mode, font, pixel cat) -->
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
+<!-- Set theme before paint to avoid flash -->
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('site-theme');
+    if (!t) t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+    if (t === 'dark') document.documentElement.setAttribute('data-theme','dark');
+  } catch(e){}
+})();
+</script>
+
 <script type="text/javascript" async
 	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
 </script>
