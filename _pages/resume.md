@@ -27,7 +27,9 @@ author_profile: true
 ## Hackathons 
 
 
-- Bunq \| Multi-modal AI Hackathon \| 
+- Bunq \| Multi-modal AI Hackathon \| [Demo](https://www.youtube.com/watch?v=0h5uQ7zsfEI)
+    - Guardian AI ; a voice only banking app to save time, reduce errors and increase accessability 
+    - Responsible for [fraud detection, bill-splitting] features through claude vision and web search tools
 
 - Veed.io \| GenAI and Video Hackathon \| $ 2^{nd} $ place \| [Demo](https://youtu.be/1Ih10nS_XB8?si=P2C3nOMgejZRffrf) 
     - Motif.ai ; create 8 second looping videos for Spotify canvas after analyzing artist's music 
