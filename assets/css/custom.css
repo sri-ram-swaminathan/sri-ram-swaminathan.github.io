@@ -123,7 +123,7 @@
   border-color: rgba(255, 255, 255, 0.12);
 }
 
-/* --- Pixel cat (sprite-sheet animation: row 0, frames 0–5 = look-up + lick) --- */
+/* --- Pixel cat (sprite-sheet animation: row 38 = lying-down lick, 7 frames) --- */
 .pixel-cat-wrapper {
   position: fixed;
   right: 16px;
@@ -137,19 +137,20 @@
 .pixel-cat-img {
   width: 128px;
   height: 128px;
-  /* Sheet is 352x1696 of 32x32 frames; rendered at 4x = 1408x6784. */
+  /* Sheet is 352x1696 of 32x32 frames; rendered at 4x = 1408x6784.
+     Row 38 starts at y = 38*32 = 1216 px in source → -4864 px at 4x. */
   background-image: url('/assets/img/cat%201.6.png');
   background-repeat: no-repeat;
   background-size: 1408px 6784px;
-  background-position: 0 0;
+  background-position: 0 -4864px;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   user-select: none;
   pointer-events: none;
-  animation: pixel-cat-groom 1.8s steps(6) infinite;
+  animation: pixel-cat-groom 2.1s steps(7) infinite;
 }
 
 @keyframes pixel-cat-groom {
-  from { background-position: 0 0; }
-  to   { background-position: -768px 0; }   /* 128 * 6 frames */
+  from { background-position: 0     -4864px; }
+  to   { background-position: -896px -4864px; }   /* 128 * 7 frames */
 }
