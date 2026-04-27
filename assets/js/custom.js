@@ -43,19 +43,15 @@
   }
 
   // --- Pixel cat ----------------------------------------------------------
-  // Uses the user-provided GIF cropped to the cat region via overflow:hidden
-  // on the wrapper. GIF provides its own animation.
+  // Sprite-sheet driven (cat 1.6.png). CSS handles frame stepping.
   function buildCat() {
     var wrapper = document.createElement('div');
     wrapper.className = 'pixel-cat-wrapper';
     wrapper.setAttribute('aria-hidden', 'true');
 
-    var img = document.createElement('img');
-    img.src = '/assets/img/pixel%20cat.gif';
-    img.alt = '';
-    img.className = 'pixel-cat-img';
-    img.draggable = false;
-    wrapper.appendChild(img);
+    var sprite = document.createElement('div');
+    sprite.className = 'pixel-cat-img';
+    wrapper.appendChild(sprite);
 
     document.body.appendChild(wrapper);
   }

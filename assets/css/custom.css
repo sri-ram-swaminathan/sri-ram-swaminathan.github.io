@@ -123,36 +123,33 @@
   border-color: rgba(255, 255, 255, 0.12);
 }
 
-/* --- Pixel cat (user-provided GIF, cropped to cat region) --- */
+/* --- Pixel cat (sprite-sheet animation: row 0, frames 0–5 = look-up + lick) --- */
 .pixel-cat-wrapper {
   position: fixed;
   right: 16px;
   bottom: 10px;
-  /* Window that reveals only the cat from the 480x480 source. */
-  width: 140px;
-  height: 78px;
-  overflow: hidden;
+  width: 128px;
+  height: 128px;
   pointer-events: none;
   z-index: 999;
 }
 
 .pixel-cat-img {
-  position: absolute;
-  /* Shift the natural-size GIF so the cat aligns with the window
-     (hides surrounding whitespace and the corner watermark). */
-  left: -155px;
-  top:  -212px;
-  width: 480px !important;         /* override theme's max-width:100% on img */
-  height: 480px !important;        /* override theme's height:auto on img */
-  max-width: none !important;
-  max-height: none !important;
+  width: 128px;
+  height: 128px;
+  /* Sheet is 352x1696 of 32x32 frames; rendered at 4x = 1408x6784. */
+  background-image: url('/assets/img/cat%201.6.png');
+  background-repeat: no-repeat;
+  background-size: 1408px 6784px;
+  background-position: 0 0;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   user-select: none;
   pointer-events: none;
+  animation: pixel-cat-groom 1.8s steps(6) infinite;
 }
 
-/* Dark mode: source GIF has a white background. Invert + hue-rotate flips
-   luminance while keeping hues, so white becomes ~black and the gray cat
-   stays roughly gray. */
-[data-theme="dark"] .pixel-cat-img { filter: invert(1) hue-rotate(180deg); }
+@keyframes pixel-cat-groom {
+  from { background-position: 0 0; }
+  to   { background-position: -768px 0; }   /* 128 * 6 frames */
+}
