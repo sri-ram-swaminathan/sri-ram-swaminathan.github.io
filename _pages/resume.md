@@ -45,22 +45,11 @@ author_profile: true
      
 ## Projects 
 
-### Charismatic leadership tactics assessment 
+### Chotu 
 
-[Detailed article](https://sriramswaminathan.com/technical/charisma)
+[Repo](https://github.com/sri-ram-swaminathan/chotu) \| [Demo]()
 
-- Created explainable features using various Deep Learning techniques on multi-modal data, and made explainable predictions using Decision Trees on 77 data points
-- Responsible for data pre-processing, label generation, gaze tracking, speech processing and correlation analysis
-
-### Automatic recommendations of preparatory math courses 
-
-[Detailed article](https://sriramswaminathan.com/technical/readysetmath/) \| [YouTube demo](https://www.youtube.com/watch?v=USG7Er_YHTM)
-
-A website that delivers randomized math tests for each student and uses a custom algorithm to send personalized recommendations via email based on their results. This was a group project @ Maastricht University. 
-
-- Implemented recommendation algorithm based on custom priority scores 
-- Created no code-dashboard to help professors analyze all students results (.csv sent in email)
-- Contributed to website creation, question generation logic, email delivery and overall debugging
+- A multi-agent, markdown based assistant for all things professional 
 
 
 ## Skills
