@@ -61,8 +61,20 @@
     else document.addEventListener('DOMContentLoaded', fn);
   }
 
+  // --- Reading progress bar ------------------------------------------------
+  function updateProgressBar() {
+    var bar = document.getElementById('reading-progress-bar');
+    if (!bar) return;
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    bar.style.width = docHeight > 0 ? Math.min((scrollTop / docHeight) * 100, 100) + '%' : '0%';
+  }
+
+  window.addEventListener('scroll', updateProgressBar, { passive: true });
+
   ready(function () {
     wireToggle();
     buildCat();
+    updateProgressBar();
   });
 })();
