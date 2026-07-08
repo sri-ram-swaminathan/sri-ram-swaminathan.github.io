@@ -9,7 +9,7 @@ author_profile: true
 
 - MSc Data Science for Decision Making, Maastricht University \| 2025-2027
     - GPA: 8.5/10 (*Cum Laude*)
-    - Thesis:
+    - Thesis: Physics Informed Machine Learning and Uncertainty Estimation for Crop Yield Prediction, done @ CBS 
     - Key courses: Mathematical Optimisation, Computational Statistics, Algorithms for Big Data, Advanced Natural Language Processing, Computer Vision
 
 - BSc Physics and Mathematics, Bangalore University \| 2021-2024
@@ -19,10 +19,10 @@ author_profile: true
 ## Experience 
 
 - Statistics Netherlands (CBS) \| February 2026 - August 2026 
-    - Improved prediction accuracy of bio-diversity assessment from RGB aerial images in the Netherlands 
-    - Managed the full data science lifecycle; data collection, preprocessing, feature engineering, and experiment evaluation
-    - Fine-tuning foundational models and building custom datasets 
-    - Creating new data augmentation techniques for earth observability 
+    - Worked on tree species classification from aerial imagery ; data pre-processing, feature engineering, and experiment validation
+    - Identified and integrated auxiliary information to images like soil type and canopy height map
+    - Implemented Deep Learning architectures from leading remote sensing papers in PyTorch & use pre-trained foundation models
+    - Applied Supervised Contrastive Learning to improve prediction performance
 
 ## Hackathons 
 
