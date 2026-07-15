@@ -86,6 +86,8 @@ What I cannot build, I do not understand - Richard P Feynman
 
 Learn the rules like a pro, so you can break them like an artist - Pablo Picasso 
 
+The Game's Afoot - Shakespeare
+
 # By yours truly 
 
 I will build that castle, but today I lay a brick. 
