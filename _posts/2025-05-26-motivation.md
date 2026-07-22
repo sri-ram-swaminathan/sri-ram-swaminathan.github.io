@@ -63,6 +63,8 @@ You don't get into something to test the waters, you get into something to make 
 
 It is not the strongest of the species that survives, nor the most intelligent. It is the one most adaptable to change - Charles Darwin
 
+One of Alexander's strongest and most formidable enemies was the Persian Empire of Darius III. In 334 BC, Alexander led a fleet of Greek and Macedonian ships across the Dardanelles Straits and into Asia Minor. When he reached the shore, Alexander ordered his men to burn the ships. He told his men, “We will either return home in Persian ships or we will die here.”
+
 # Wholesome
 
 If you can't say something nice, don't say nothing at all. - Thumper 
