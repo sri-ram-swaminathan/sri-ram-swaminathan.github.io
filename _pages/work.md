@@ -1,14 +1,14 @@
 ---
 layout: splash
-title: "Portfolio"
-permalink: /resume/
+title: "Work"
+permalink: /work/
 author_profile: true
 ---
 
 ## Education
 
 - MSc Data Science for Decision Making, Maastricht University \| 2025-2027
-    - GPA: 8.5/10 (*Cum Laude*)
+    - GPA: 8.3/10 (*Cum Laude*)
     - Thesis: Physics Informed Machine Learning and Uncertainty Estimation for Crop Yield Prediction, done @ CBS 
     - Key courses: Mathematical Optimisation, Computational Statistics, Algorithms for Big Data, Advanced Natural Language Processing, Computer Vision
 
@@ -18,14 +18,25 @@ author_profile: true
 
 ## Experience 
 
+- Statistics Netherlands (CBS) \| August 2026 - February 2027 
+    - Crop yield estimation from remote sensing inputs; how to make predictions reliable & scalable? 
+    - Custom CNN based architecture and loss function to improve out-of-domain performance 
+    - Conformal prediction based framework for uncertainty quantification 
+
+- Reviewer for World Models in Physical AI workshop @ NeurIPS 2026 \| September 2026 
+
+- FORGIS \| August 2026 
+    - Action-conditioned world models for time series 
+    - Developed non-greedy evaluation metric 
+    - Implemented auto-regressive prediction head
+
 - Statistics Netherlands (CBS) \| February 2026 - August 2026 
-    - Worked on tree species classification from aerial imagery ; data pre-processing, feature engineering, and experiment validation
-    - Identified and integrated auxiliary information to images like soil type and canopy height map
-    - Implemented Deep Learning architectures from leading remote sensing papers in PyTorch & use pre-trained foundation models
-    - Applied Supervised Contrastive Learning to improve prediction performance
+    - Tree species classification from aerial images; how to work around limited data? (size and modality) 
+    - Fine-tuned GeoSpatial Foundation models & tried transfer learning from related dataset 
+    - Derived canopy height maps as scalable proxy for 3D LiDAR information & custom architecture for processing 
+    - Applied Contrastive Learning as pre-training strategy for image encoder 
 
 ## Hackathons 
-
 
 - Bunq \| Multi-modal AI Hackathon \| [Demo](https://www.youtube.com/watch?v=0h5uQ7zsfEI)
     - Guardian AI ; a voice only banking app to save time, reduce errors and increase accessability 
