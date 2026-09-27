@@ -59,6 +59,8 @@ architecture:
     image_path: https://lh3.googleusercontent.com/d/1GzBZh1vVW-j2lpuU49GwmlEzj1j-VVPh=w800
   - url: https://lh3.googleusercontent.com/d/1W6fJHIuLBxB7BN-NJmG8FxNZlbDCYkUK=w2000#.jpg
     image_path: https://lh3.googleusercontent.com/d/1W6fJHIuLBxB7BN-NJmG8FxNZlbDCYkUK=w800
+  - url: https://lh3.googleusercontent.com/d/1xaAiJQaeNwvvUwkyqetdM1h5-ekCxhwI=w2000#.jpg
+    image_path: https://lh3.googleusercontent.com/d/1xaAiJQaeNwvvUwkyqetdM1h5-ekCxhwI=w800
 
 football:
   - url: https://lh3.googleusercontent.com/d/1hEOwS0G2OD4HaIVClSFS_izbsDQEaoh4=w2000#.jpg
@@ -69,8 +71,6 @@ football:
     image_path: https://lh3.googleusercontent.com/d/1Iw5JVL6TdBZfLyAmYK18aJqXcgWyPjqg=w800
   - url: https://lh3.googleusercontent.com/d/1_PLQBWJMKqBa8JRKGilD3HFzLo11nsCZ=w2000#.jpg
     image_path: https://lh3.googleusercontent.com/d/1_PLQBWJMKqBa8JRKGilD3HFzLo11nsCZ=w800
-  - url: https://lh3.googleusercontent.com/d/1xaAiJQaeNwvvUwkyqetdM1h5-ekCxhwI=w2000#.jpg
-    image_path: https://lh3.googleusercontent.com/d/1xaAiJQaeNwvvUwkyqetdM1h5-ekCxhwI=w800
   - url: https://lh3.googleusercontent.com/d/1Vhd_Csr_nf2IiSyhpQ2Ei2dV2HQkaa_K=w2000#.jpg
     image_path: https://lh3.googleusercontent.com/d/1Vhd_Csr_nf2IiSyhpQ2Ei2dV2HQkaa_K=w800
   - url: https://lh3.googleusercontent.com/d/1ksIKppY-J9rMgPwhUU8xaYZqMiQWY3MT=w2000#.jpg
