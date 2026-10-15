@@ -38,6 +38,10 @@ author_profile: true
 
 ## Hackathons 
 
+- Mistral x Stanford \| LLM x Law Hackathon \| $ 2^{nd} $ place
+    - CCOmitt ; an always on agent that lives in your companies knowledge base and ensures that every new feature/release is compliant with the law
+    - Responsible for [mlti-agent, RAG] setup
+
 - Bunq \| Multi-modal AI Hackathon \| [Demo](https://www.youtube.com/watch?v=0h5uQ7zsfEI)
     - Guardian AI ; a voice only banking app to save time, reduce errors and increase accessability 
     - Responsible for [fraud detection, bill-splitting] features through claude vision and web search tools
