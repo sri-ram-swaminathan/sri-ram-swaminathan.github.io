@@ -42,20 +42,6 @@
     else if (mq.addListener) mq.addListener(mqHandler);
   }
 
-  // --- Pixel cat ----------------------------------------------------------
-  // Sprite-sheet driven (cat 1.6.png). CSS handles frame stepping.
-  function buildCat() {
-    var wrapper = document.createElement('div');
-    wrapper.className = 'pixel-cat-wrapper';
-    wrapper.setAttribute('aria-hidden', 'true');
-
-    var sprite = document.createElement('div');
-    sprite.className = 'pixel-cat-img';
-    wrapper.appendChild(sprite);
-
-    document.body.appendChild(wrapper);
-  }
-
   function ready(fn) {
     if (document.readyState !== 'loading') fn();
     else document.addEventListener('DOMContentLoaded', fn);
@@ -74,7 +60,6 @@
 
   ready(function () {
     wireToggle();
-    buildCat();
     updateProgressBar();
   });
 })();
