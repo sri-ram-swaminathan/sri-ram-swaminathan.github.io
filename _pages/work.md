@@ -42,17 +42,9 @@ author_profile: true
     - CCOmitt ; an always on agent that lives in your companies knowledge base and ensures that every new feature/release is compliant with the law
     - Responsible for [mlti-agent, RAG] setup
 
-- Bunq \| Multi-modal AI Hackathon \| [Demo](https://www.youtube.com/watch?v=0h5uQ7zsfEI)
-    - Guardian AI ; a voice only banking app to save time, reduce errors and increase accessability 
-    - Responsible for [fraud detection, bill-splitting] features through claude vision and web search tools
-
 - Veed.io \| GenAI and Video Hackathon \| $ 2^{nd} $ place \| [Demo](https://youtu.be/1Ih10nS_XB8?si=P2C3nOMgejZRffrf) 
     - Motif.ai ; create 8 second looping videos for Spotify canvas after analyzing artist's music 
     - Responsible for [text-to-image, image-to-video] models and video editing feature 
-
-- Maastricht University \| Supernova buildathon \| [Demo](https://hackathon-supernova.vercel.app/)
-    - A note taking platform where students get real-time feedback based on course materials and teachers understand student comprehension 
-    - Built RAG pipelines for checking notes based on provided context in DataStax
 
 - Prosus \| AI University Games Hackathon \| [Demo](https://www.youtube.com/watch?v=nbHr0_cbxaM)
     - An AI Agent personal assistant that schedules tasks and manages conflicts from natural language voice input and email
