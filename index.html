@@ -1,8 +1,50 @@
 ---
 layout: home
 author_profile: true
+# Tree selfie reel: drop photos at these paths. Missing ones are skipped automatically.
+reel:
+  - image: /assets/img/reel/spring.jpg
+    season: Spring
+  - image: /assets/img/reel/summer.jpg
+    season: Summer
+  - image: /assets/img/reel/autumn.jpg
+    season: Autumn
+  - image: /assets/img/reel/winter.jpg
+    season: Winter
 ---
-<img src="\assets\img\bio-photo.jpg" width="200" height="200" vspace="20">
+<style>
+  .reel { position: relative; width: 200px; height: 200px; margin: 20px 0 6px; cursor: pointer; }
+  .reel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .8s ease; }
+  .reel img.on { opacity: 1; }
+  .reel__caption { width: 200px; text-align: center; font-size: .75em; opacity: .7; margin-bottom: 14px; }
+</style>
+{% assign n = 0 %}
+<div class="reel" id="reel" title="Click for the next season">
+  {% for p in page.reel %}{% assign f = site.static_files | where: "path", p.image %}{% if f.size > 0 %}{% assign n = n | plus: 1 %}
+  <img src="{{ p.image | relative_url }}" alt="Tree selfie, {{ p.season }}" data-season="{{ p.season }}">{% endif %}{% endfor %}
+  {% if n == 0 %}<img class="on" src="{{ '/assets/img/bio-photo.jpg' | relative_url }}" alt="Sriram">{% endif %}
+</div>
+<div class="reel__caption" id="reel-caption"></div>
+<script>
+  (function () {
+    var imgs = document.querySelectorAll('#reel img[data-season]');
+    if (!imgs.length) return;
+    var cap = document.getElementById('reel-caption');
+    var seasons = ['Winter', 'Winter', 'Spring', 'Spring', 'Spring', 'Summer', 'Summer', 'Summer', 'Autumn', 'Autumn', 'Autumn', 'Winter'];
+    var now = seasons[new Date().getMonth()], i = 0, timer;
+    imgs.forEach(function (img, k) { if (img.dataset.season === now) i = k; });
+    function show(k) {
+      imgs[i].classList.remove('on');
+      i = (k + imgs.length) % imgs.length;
+      imgs[i].classList.add('on');
+      cap.textContent = imgs.length > 1 ? '🌳 ' + imgs[i].dataset.season : '';
+    }
+    function start() { clearInterval(timer); if (imgs.length > 1) timer = setInterval(function () { show(i + 1); }, 4000); }
+    show(i);
+    start();
+    document.getElementById('reel').addEventListener('click', function () { show(i + 1); start(); });
+  })();
+</script>
 <br>
 <a href="https://youtu.be/rEq1Z0bjdwc?si=iO_qPAG-NmHx5n2Z"> Hello There, </a>
 <br>
@@ -22,3 +64,5 @@ If I could describe my state-of-mind in one sentence, it would be: constantly bi
     <li>Applying to PhD positions / startups 🧗</li>
     <li>Relising the last few days of being a student 🥹</li>
 </ul>
+<br>
+Want to chat about research, startups or football? <a href="https://cal.com/sri-ram-swaminathan/30min">Book a 30-min call</a> 📅

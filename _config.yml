@@ -128,6 +128,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sri-ram-swaminathan"
+    - label: "Book a meeting"
+      icon: "fas fa-fw fa-calendar-check"
+      url: "https://cal.com/sri-ram-swaminathan/30min"
 
 # Site Footer
 footer:
