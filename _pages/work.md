@@ -46,9 +46,11 @@ author_profile: true
     - Motif.ai ; create 8 second looping videos for Spotify canvas after analyzing artist's music 
     - Responsible for [text-to-image, image-to-video] models and video editing feature 
 
-- Prosus \| AI University Games Hackathon \| [Demo](https://www.youtube.com/watch?v=nbHr0_cbxaM)
-    - An AI Agent personal assistant that schedules tasks and manages conflicts from natural language voice input and email
-    - Built Google Calendar integration tool and Gmail notification scheduler agent
+- MAIN AI Hackathon \| Sourcera Liquid Briefing track \| November 2026 \| [Demo](https://sriramswaminathan.com/daily-briefing/)
+    - Personalised news briefings, built in two days
+    - Built seven different agent personas that each critique the same piece of news
+    - Implemented sentence-level retrieval for grounded, fully cited news reporting
+    - Built a voice-first, interactive news podcast using OpenAI and ElevenLabs APIs
      
 ## Projects 
 
@@ -56,7 +58,12 @@ author_profile: true
 
 [Repo](https://github.com/sri-ram-swaminathan/chotu) \| [Demo]()
 
-- A multi-agent, markdown based assistant for all things professional 
+*24/7 multi-agent job-search assistant* \| TypeScript, LangGraph, Cloudflare Workers, SQL
+
+- Built and deployed an end-to-end AI Agent workflow on Cloudflare Workers (cron scheduling, D1/SQL, Telegram bot) that delivers 2 ranked job recommendations a day and learns from apply/skip feedback
+- Wrote deterministic extractors for 13 REST/JSON job-board and ATS APIs plus email alerts; hard constraints (visa sponsorship, location, seniority) are enforced in code before any LLM call
+- Orchestrated LangGraph agents over a pool of free LLMs (Gemini, Groq, Llama, Claude) with automatic fallback; each job is scored against the candidate profile injected into context, with structured JSON outputs validated by zod
+- Includes custom calendar for deadlines, and interview preparation progress tracking
 
 
 ## Skills
