@@ -46,11 +46,11 @@ author_profile: true
     - Motif.ai ; create 8 second looping videos for Spotify canvas after analyzing artist's music 
     - Responsible for [text-to-image, image-to-video] models and video editing feature 
 
-- MAIN AI Hackathon \| Sourcera Liquid Briefing track \| November 2026 \| [Demo](https://sriramswaminathan.com/daily-briefing/)
-    - Personalised news briefings, built in two days
+- MAIN AI Hackathon \| Sourcera Liquid Briefing track \| [Demo](https://sriramswaminathan.com/daily-briefing/)
+    - Nuanced, personalized, and interactive news podcast 
     - Built seven different agent personas that each critique the same piece of news
+    - Each user gets custom summary based on their own profile
     - Implemented sentence-level retrieval for grounded, fully cited news reporting
-    - Built a voice-first, interactive news podcast using OpenAI and ElevenLabs APIs
      
 ## Projects 
 
