@@ -19,9 +19,9 @@ author_profile: true
 ## Experience 
 
 - Statistics Netherlands (CBS) \| August 2026 - February 2027 
-    - Crop yield estimation from remote sensing inputs; how to make predictions reliable & scalable? 
-    - Custom CNN based architecture and loss function to improve out-of-domain performance 
-    - Conformal prediction based framework for uncertainty quantification 
+    - Formulated main research question: how can national crop yield estimates from satellite data be both reliable and scalable?
+    - Designed a physics-informed model that holds up on unseen regions and years, with conformal prediction so every estimate comes with a confidence interval decision-makers can trust
+    - Among the first users of the new GPU platforms at CBS and the university; debug Kubernetes and Slurm jobs, model serving, and Linux/SSH issues for myself and colleagues
 
 - Reviewer for World Models in Physical AI workshop @ NeurIPS 2026 \| September 2026 
 
@@ -56,7 +56,7 @@ author_profile: true
 
 ### Chotu 
 
-[Repo](https://github.com/sri-ram-swaminathan/chotu) \| [Demo]()
+[Repo](https://github.com/sri-ram-swaminathan/chotu)
 
 *24/7 multi-agent job-search assistant* \| TypeScript, LangGraph, Cloudflare Workers, SQL
 
